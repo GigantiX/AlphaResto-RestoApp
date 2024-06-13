@@ -1,0 +1,599 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3FD1F6BD2C1831690022ACE5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD1F6BC2C1831690022ACE5 /* AppDelegate.swift */; };
+		3FD1F6BF2C1831690022ACE5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD1F6BE2C1831690022ACE5 /* SceneDelegate.swift */; };
+		3FD1F6C12C1831690022ACE5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD1F6C02C1831690022ACE5 /* ViewController.swift */; };
+		3FD1F6C42C1831690022ACE5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FD1F6C22C1831690022ACE5 /* Main.storyboard */; };
+		3FD1F6C62C18316B0022ACE5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FD1F6C52C18316B0022ACE5 /* Assets.xcassets */; };
+		3FD1F6C92C18316B0022ACE5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FD1F6C72C18316B0022ACE5 /* LaunchScreen.storyboard */; };
+		3FD1F6E32C19838D0022ACE5 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD1F6E22C19838D0022ACE5 /* Constant.swift */; };
+		3FD1F6E82C1A88D00022ACE5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3FD1F6E72C1A88D00022ACE5 /* GoogleService-Info.plist */; };
+		C0A1B604986CD9BF223F0EE4 /* Pods_AlfaResto_RestoApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1A3409196447B0F60BFEDD9 /* Pods_AlfaResto_RestoApp.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		226F6D1C1BD61E0CE5F11DDB /* Pods-AlfaResto-RestoApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlfaResto-RestoApp.release.xcconfig"; path = "Target Support Files/Pods-AlfaResto-RestoApp/Pods-AlfaResto-RestoApp.release.xcconfig"; sourceTree = "<group>"; };
+		3FD1F6B92C1831690022ACE5 /* AlfaResto-RestoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AlfaResto-RestoApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3FD1F6BC2C1831690022ACE5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3FD1F6BE2C1831690022ACE5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		3FD1F6C02C1831690022ACE5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3FD1F6C32C1831690022ACE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3FD1F6C52C18316B0022ACE5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3FD1F6C82C18316B0022ACE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3FD1F6CA2C18316B0022ACE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3FD1F6E22C19838D0022ACE5 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		3FD1F6E72C1A88D00022ACE5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E1A3409196447B0F60BFEDD9 /* Pods_AlfaResto_RestoApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AlfaResto_RestoApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F429769694F024F490038F2A /* Pods-AlfaResto-RestoApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlfaResto-RestoApp.debug.xcconfig"; path = "Target Support Files/Pods-AlfaResto-RestoApp/Pods-AlfaResto-RestoApp.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3FD1F6B62C1831690022ACE5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0A1B604986CD9BF223F0EE4 /* Pods_AlfaResto_RestoApp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3FD1F6B02C1831690022ACE5 = {
+			isa = PBXGroup;
+			children = (
+				3FD1F6BB2C1831690022ACE5 /* AlfaResto-RestoApp */,
+				3FD1F6BA2C1831690022ACE5 /* Products */,
+				AB5CB10B0F10A9CAF645E102 /* Pods */,
+				77851AF7238A56C1F7E414D0 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		3FD1F6BA2C1831690022ACE5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3FD1F6B92C1831690022ACE5 /* AlfaResto-RestoApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3FD1F6BB2C1831690022ACE5 /* AlfaResto-RestoApp */ = {
+			isa = PBXGroup;
+			children = (
+				3FD1F6D22C1980F40022ACE5 /* Application */,
+				3FD1F6D42C1981030022ACE5 /* Infrastructure */,
+				3FD1F6D72C1981140022ACE5 /* Data */,
+				3FD1F6D62C1981100022ACE5 /* Domain */,
+				3FD1F6D52C19810A0022ACE5 /* Presentation */,
+				3FD1F6E52C1983B30022ACE5 /* Common */,
+				3FD1F6D32C1980FB0022ACE5 /* Resources */,
+				3FD1F6D82C19811E0022ACE5 /* Files */,
+			);
+			path = "AlfaResto-RestoApp";
+			sourceTree = "<group>";
+		};
+		3FD1F6D22C1980F40022ACE5 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				3FD1F6D92C1981430022ACE5 /* DIContainer */,
+				3FD1F6BC2C1831690022ACE5 /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		3FD1F6D32C1980FB0022ACE5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3FD1F6E22C19838D0022ACE5 /* Constant.swift */,
+				3FD1F6C52C18316B0022ACE5 /* Assets.xcassets */,
+				3FD1F6CA2C18316B0022ACE5 /* Info.plist */,
+				3FD1F6C72C18316B0022ACE5 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		3FD1F6D42C1981030022ACE5 /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				3FD1F6DA2C1981620022ACE5 /* Network */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		3FD1F6D52C19810A0022ACE5 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				3FD1F6C02C1831690022ACE5 /* ViewController.swift */,
+				3FD1F6C22C1831690022ACE5 /* Main.storyboard */,
+				3FD1F6E42C1983A90022ACE5 /* Utils */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		3FD1F6D62C1981100022ACE5 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				3FD1F6DF2C1983010022ACE5 /* UseCase */,
+				3FD1F6DE2C1982F80022ACE5 /* Entity */,
+				3FD1F6E02C1983070022ACE5 /* Interface */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		3FD1F6D72C1981140022ACE5 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				3FD1F6DB2C19816D0022ACE5 /* Repositories */,
+				3FD1F6DC2C19817E0022ACE5 /* Network */,
+				3FD1F6DD2C19818E0022ACE5 /* PersistenceData */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		3FD1F6D82C19811E0022ACE5 /* Files */ = {
+			isa = PBXGroup;
+			children = (
+				3FD1F6E72C1A88D00022ACE5 /* GoogleService-Info.plist */,
+				3FD1F6BE2C1831690022ACE5 /* SceneDelegate.swift */,
+			);
+			name = Files;
+			sourceTree = "<group>";
+		};
+		3FD1F6D92C1981430022ACE5 /* DIContainer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DIContainer;
+			sourceTree = "<group>";
+		};
+		3FD1F6DA2C1981620022ACE5 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		3FD1F6DB2C19816D0022ACE5 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		3FD1F6DC2C19817E0022ACE5 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		3FD1F6DD2C19818E0022ACE5 /* PersistenceData */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PersistenceData;
+			sourceTree = "<group>";
+		};
+		3FD1F6DE2C1982F80022ACE5 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		3FD1F6DF2C1983010022ACE5 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		3FD1F6E02C1983070022ACE5 /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				3FD1F6E12C1983110022ACE5 /* Repository */,
+			);
+			path = Interface;
+			sourceTree = "<group>";
+		};
+		3FD1F6E12C1983110022ACE5 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		3FD1F6E42C1983A90022ACE5 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				3FD1F6E62C1983F10022ACE5 /* Extensions */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		3FD1F6E52C1983B30022ACE5 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		3FD1F6E62C1983F10022ACE5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		77851AF7238A56C1F7E414D0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E1A3409196447B0F60BFEDD9 /* Pods_AlfaResto_RestoApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AB5CB10B0F10A9CAF645E102 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F429769694F024F490038F2A /* Pods-AlfaResto-RestoApp.debug.xcconfig */,
+				226F6D1C1BD61E0CE5F11DDB /* Pods-AlfaResto-RestoApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3FD1F6B82C1831690022ACE5 /* AlfaResto-RestoApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3FD1F6CD2C18316B0022ACE5 /* Build configuration list for PBXNativeTarget "AlfaResto-RestoApp" */;
+			buildPhases = (
+				AB19C4F8368B21C3C6040146 /* [CP] Check Pods Manifest.lock */,
+				3FD1F6B52C1831690022ACE5 /* Sources */,
+				3FD1F6B62C1831690022ACE5 /* Frameworks */,
+				3FD1F6B72C1831690022ACE5 /* Resources */,
+				683D18360F723E4FAF7FE670 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "AlfaResto-RestoApp";
+			productName = "AlfaResto-RestoApp";
+			productReference = 3FD1F6B92C1831690022ACE5 /* AlfaResto-RestoApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3FD1F6B12C1831690022ACE5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					3FD1F6B82C1831690022ACE5 = {
+						CreatedOnToolsVersion = 15.2;
+					};
+				};
+			};
+			buildConfigurationList = 3FD1F6B42C1831690022ACE5 /* Build configuration list for PBXProject "AlfaResto-RestoApp" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3FD1F6B02C1831690022ACE5;
+			productRefGroup = 3FD1F6BA2C1831690022ACE5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3FD1F6B82C1831690022ACE5 /* AlfaResto-RestoApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3FD1F6B72C1831690022ACE5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FD1F6C92C18316B0022ACE5 /* LaunchScreen.storyboard in Resources */,
+				3FD1F6E82C1A88D00022ACE5 /* GoogleService-Info.plist in Resources */,
+				3FD1F6C62C18316B0022ACE5 /* Assets.xcassets in Resources */,
+				3FD1F6C42C1831690022ACE5 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		683D18360F723E4FAF7FE670 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AlfaResto-RestoApp/Pods-AlfaResto-RestoApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AlfaResto-RestoApp/Pods-AlfaResto-RestoApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AlfaResto-RestoApp/Pods-AlfaResto-RestoApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AB19C4F8368B21C3C6040146 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AlfaResto-RestoApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3FD1F6B52C1831690022ACE5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FD1F6C12C1831690022ACE5 /* ViewController.swift in Sources */,
+				3FD1F6BD2C1831690022ACE5 /* AppDelegate.swift in Sources */,
+				3FD1F6BF2C1831690022ACE5 /* SceneDelegate.swift in Sources */,
+				3FD1F6E32C19838D0022ACE5 /* Constant.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3FD1F6C22C1831690022ACE5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3FD1F6C32C1831690022ACE5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3FD1F6C72C18316B0022ACE5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3FD1F6C82C18316B0022ACE5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3FD1F6CB2C18316B0022ACE5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3FD1F6CC2C18316B0022ACE5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3FD1F6CE2C18316B0022ACE5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F429769694F024F490038F2A /* Pods-AlfaResto-RestoApp.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = UKUGHUS3M8;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "AlfaResto-RestoApp/Resources/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "GeraldyK.AlfaResto-RestoApp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3FD1F6CF2C18316B0022ACE5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 226F6D1C1BD61E0CE5F11DDB /* Pods-AlfaResto-RestoApp.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UKUGHUS3M8;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "AlfaResto-RestoApp/Resources/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "GeraldyK.AlfaResto-RestoApp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3FD1F6B42C1831690022ACE5 /* Build configuration list for PBXProject "AlfaResto-RestoApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3FD1F6CB2C18316B0022ACE5 /* Debug */,
+				3FD1F6CC2C18316B0022ACE5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3FD1F6CD2C18316B0022ACE5 /* Build configuration list for PBXNativeTarget "AlfaResto-RestoApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3FD1F6CE2C18316B0022ACE5 /* Debug */,
+				3FD1F6CF2C18316B0022ACE5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3FD1F6B12C1831690022ACE5 /* Project object */;
+}
