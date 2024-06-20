@@ -15,11 +15,9 @@
 		3FD1F6C92C18316B0022ACE5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FD1F6C72C18316B0022ACE5 /* LaunchScreen.storyboard */; };
 		3FD1F6E32C19838D0022ACE5 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD1F6E22C19838D0022ACE5 /* Constant.swift */; };
 		3FD1F6E82C1A88D00022ACE5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3FD1F6E72C1A88D00022ACE5 /* GoogleService-Info.plist */; };
-		C0A1B604986CD9BF223F0EE4 /* Pods_AlfaResto_RestoApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1A3409196447B0F60BFEDD9 /* Pods_AlfaResto_RestoApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		226F6D1C1BD61E0CE5F11DDB /* Pods-AlfaResto-RestoApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlfaResto-RestoApp.release.xcconfig"; path = "Target Support Files/Pods-AlfaResto-RestoApp/Pods-AlfaResto-RestoApp.release.xcconfig"; sourceTree = "<group>"; };
 		3FD1F6B92C1831690022ACE5 /* AlfaResto-RestoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AlfaResto-RestoApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FD1F6BC2C1831690022ACE5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3FD1F6BE2C1831690022ACE5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -30,8 +28,6 @@
 		3FD1F6CA2C18316B0022ACE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3FD1F6E22C19838D0022ACE5 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		3FD1F6E72C1A88D00022ACE5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		E1A3409196447B0F60BFEDD9 /* Pods_AlfaResto_RestoApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AlfaResto_RestoApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F429769694F024F490038F2A /* Pods-AlfaResto-RestoApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlfaResto-RestoApp.debug.xcconfig"; path = "Target Support Files/Pods-AlfaResto-RestoApp/Pods-AlfaResto-RestoApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,7 +35,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C0A1B604986CD9BF223F0EE4 /* Pods_AlfaResto_RestoApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,7 +47,6 @@
 				3FD1F6BB2C1831690022ACE5 /* AlfaResto-RestoApp */,
 				3FD1F6BA2C1831690022ACE5 /* Products */,
 				AB5CB10B0F10A9CAF645E102 /* Pods */,
-				77851AF7238A56C1F7E414D0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -232,19 +226,9 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		77851AF7238A56C1F7E414D0 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				E1A3409196447B0F60BFEDD9 /* Pods_AlfaResto_RestoApp.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		AB5CB10B0F10A9CAF645E102 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				F429769694F024F490038F2A /* Pods-AlfaResto-RestoApp.debug.xcconfig */,
-				226F6D1C1BD61E0CE5F11DDB /* Pods-AlfaResto-RestoApp.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -256,11 +240,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3FD1F6CD2C18316B0022ACE5 /* Build configuration list for PBXNativeTarget "AlfaResto-RestoApp" */;
 			buildPhases = (
-				AB19C4F8368B21C3C6040146 /* [CP] Check Pods Manifest.lock */,
 				3FD1F6B52C1831690022ACE5 /* Sources */,
 				3FD1F6B62C1831690022ACE5 /* Frameworks */,
 				3FD1F6B72C1831690022ACE5 /* Resources */,
-				683D18360F723E4FAF7FE670 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -317,48 +299,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		683D18360F723E4FAF7FE670 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AlfaResto-RestoApp/Pods-AlfaResto-RestoApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AlfaResto-RestoApp/Pods-AlfaResto-RestoApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AlfaResto-RestoApp/Pods-AlfaResto-RestoApp-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		AB19C4F8368B21C3C6040146 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-AlfaResto-RestoApp-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3FD1F6B52C1831690022ACE5 /* Sources */ = {
@@ -515,7 +455,6 @@
 		};
 		3FD1F6CE2C18316B0022ACE5 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F429769694F024F490038F2A /* Pods-AlfaResto-RestoApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -546,7 +485,6 @@
 		};
 		3FD1F6CF2C18316B0022ACE5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 226F6D1C1BD61E0CE5F11DDB /* Pods-AlfaResto-RestoApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
