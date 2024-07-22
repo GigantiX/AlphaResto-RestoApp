@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Order Detail View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="OrderDetailViewController" hidesBottomBarWhenPushed="YES" id="Y6W-OH-hqX" customClass="OrderDetailViewController" customModule="AlfaResto_RestoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Abraham" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PXM-JZ-n2K">
+                                <rect key="frame" x="82" y="69" width="87" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Customer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E7x-VP-54X">
+                                <rect key="frame" x="82" y="96" width="59.333333333333343" height="15.666666666666671"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" name="MainGray"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nPK-th-kqA">
+                                <rect key="frame" x="0.0" y="124" width="393" height="694"/>
+                                <connections>
+                                    <segue destination="Laq-lw-Elc" kind="embed" identifier="OrderDetailTableViewController" id="oj2-Ye-l3J"/>
+                                </connections>
+                            </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d5W-fF-vVA">
+                                <rect key="frame" x="20" y="69" width="45" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="45" id="ZUq-lZ-oIT"/>
+                                    <constraint firstAttribute="height" constant="45" id="nt6-Wj-EJF"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" image="chevron.left" catalog="system" cornerStyle="capsule">
+                                    <color key="baseForegroundColor" name="MainGray"/>
+                                    <color key="baseBackgroundColor" name="SemiWhite"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="backButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="iiq-Ey-GDZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aM3-Ya-srE">
+                                <rect key="frame" x="328" y="69" width="45" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="91L-po-Gfc"/>
+                                    <constraint firstAttribute="width" constant="45" id="bnP-g6-kaj"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" image="message.fill" catalog="system" cornerStyle="capsule">
+                                    <color key="baseForegroundColor" name="SemiWhite"/>
+                                    <color key="baseBackgroundColor" name="MainColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="chatButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="RlI-SY-iae"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="nPK-th-kqA" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="0fu-fx-e4m"/>
+                            <constraint firstItem="aM3-Ya-srE" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="10" id="JJg-Qb-RPg"/>
+                            <constraint firstItem="d5W-fF-vVA" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="Mgo-6b-vzM"/>
+                            <constraint firstItem="PXM-JZ-n2K" firstAttribute="leading" secondItem="d5W-fF-vVA" secondAttribute="trailing" constant="17" id="P8E-9t-sGz"/>
+                            <constraint firstItem="E7x-VP-54X" firstAttribute="top" secondItem="PXM-JZ-n2K" secondAttribute="bottom" constant="3" id="Rik-1N-SZU"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="aM3-Ya-srE" secondAttribute="trailing" constant="20" id="Xvj-tN-kot"/>
+                            <constraint firstItem="d5W-fF-vVA" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="10" id="agX-CM-KAZ"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="nPK-th-kqA" secondAttribute="bottom" id="dNU-zj-mdM"/>
+                            <constraint firstItem="E7x-VP-54X" firstAttribute="leading" secondItem="d5W-fF-vVA" secondAttribute="trailing" constant="17" id="eTb-fe-r5G"/>
+                            <constraint firstItem="PXM-JZ-n2K" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="10" id="lHo-zd-3o9"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="nPK-th-kqA" secondAttribute="trailing" id="mVc-dU-qfc"/>
+                            <constraint firstItem="nPK-th-kqA" firstAttribute="top" secondItem="d5W-fF-vVA" secondAttribute="bottom" constant="10" id="vG9-bI-2ZF"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="customerNameLabel" destination="PXM-JZ-n2K" id="arE-5u-ulC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="41.984732824427482" y="-2.1126760563380285"/>
+        </scene>
+        <!--Order Detail Table View Controller-->
+        <scene sceneID="8L8-c5-h4h">
+            <objects>
+                <viewController storyboardIdentifier="OrderDetailTableViewController" id="Laq-lw-Elc" customClass="OrderDetailTableViewController" customModule="AlfaResto_RestoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="iub-BI-DFr">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="694"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </tableView>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CXP-wt-Bck" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="869" y="-2"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="chevron.left" catalog="system" width="97" height="128"/>
+        <image name="message.fill" catalog="system" width="128" height="114"/>
+        <namedColor name="MainColor">
+            <color red="0.98431372549019602" green="0.35686274509803922" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="MainGray">
+            <color red="0.32156862745098042" green="0.38039215686274508" blue="0.41960784313725491" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="SemiWhite">
+            <color red="0.92941176470588238" green="0.94509803921568625" blue="0.95686274509803926" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

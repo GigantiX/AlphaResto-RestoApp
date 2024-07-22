@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ListMenuItemCell" customModule="AlfaResto_RestoApp" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ListMenuItemCell" id="gTV-IL-0wX" customClass="ListMenuItemCell" customModule="AlfaResto_RestoApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="348" height="120"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="348" height="120"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AlfaRestoLogo" translatesAutoresizingMaskIntoConstraints="NO" id="U1S-ZG-9r9">
+                        <rect key="frame" x="14" y="13" width="106" height="94"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="106" id="66j-dU-qq1"/>
+                            <constraint firstAttribute="height" constant="94" id="CTv-KM-xdh"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beef Ribs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vnT-Fm-7ZF">
+                        <rect key="frame" x="141" y="13" width="87" height="24"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USDA Beef Ribs Finger" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iis-SN-BnR">
+                        <rect key="frame" x="141" y="40" width="139" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" name="MainGray"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rp. 25.000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i3y-bp-dKk">
+                        <rect key="frame" x="141" y="59" width="67" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stock: 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eEJ-m4-m6H">
+                        <rect key="frame" x="141" y="78" width="50" height="15.666666666666671"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kg1-AW-CnA">
+                        <rect key="frame" x="302" y="73" width="35" height="35"/>
+                        <color key="backgroundColor" name="MainColor"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="35" id="0xh-eN-Jjd"/>
+                            <constraint firstAttribute="height" constant="35" id="Uwt-cf-0Sl"/>
+                        </constraints>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" image="square.and.pencil" catalog="system">
+                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </buttonConfiguration>
+                    </button>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="vnT-Fm-7ZF" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="13" id="13e-aC-UUA"/>
+                <constraint firstItem="i3y-bp-dKk" firstAttribute="leading" secondItem="U1S-ZG-9r9" secondAttribute="trailing" constant="21" id="95R-fh-sck"/>
+                <constraint firstItem="i3y-bp-dKk" firstAttribute="top" secondItem="Iis-SN-BnR" secondAttribute="bottom" constant="3" id="DUg-NG-qia"/>
+                <constraint firstItem="U1S-ZG-9r9" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="14" id="KlK-jl-04h"/>
+                <constraint firstItem="Iis-SN-BnR" firstAttribute="leading" secondItem="U1S-ZG-9r9" secondAttribute="trailing" constant="21" id="OIm-1V-vH4"/>
+                <constraint firstAttribute="bottom" secondItem="Kg1-AW-CnA" secondAttribute="bottom" constant="12" id="OQz-4F-Thy"/>
+                <constraint firstItem="vnT-Fm-7ZF" firstAttribute="leading" secondItem="U1S-ZG-9r9" secondAttribute="trailing" constant="21" id="Sne-ku-hCJ"/>
+                <constraint firstAttribute="trailing" secondItem="Kg1-AW-CnA" secondAttribute="trailing" constant="11" id="aTb-sg-lNy"/>
+                <constraint firstItem="eEJ-m4-m6H" firstAttribute="top" secondItem="i3y-bp-dKk" secondAttribute="bottom" constant="3" id="c3u-Cb-iND"/>
+                <constraint firstItem="eEJ-m4-m6H" firstAttribute="leading" secondItem="U1S-ZG-9r9" secondAttribute="trailing" constant="21" id="dWb-Zw-SKQ"/>
+                <constraint firstItem="U1S-ZG-9r9" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="13" id="h8j-Tu-B7S"/>
+                <constraint firstAttribute="bottom" secondItem="U1S-ZG-9r9" secondAttribute="bottom" constant="13" id="ixV-sL-cjo"/>
+                <constraint firstItem="Iis-SN-BnR" firstAttribute="top" secondItem="vnT-Fm-7ZF" secondAttribute="bottom" constant="3" id="sNA-VF-Ucj"/>
+            </constraints>
+            <size key="customSize" width="348" height="120"/>
+            <connections>
+                <outlet property="editButton" destination="Kg1-AW-CnA" id="bX1-Ou-p7d"/>
+                <outlet property="menuDescriptionLabel" destination="Iis-SN-BnR" id="E1O-J4-t6b"/>
+                <outlet property="menuImageView" destination="U1S-ZG-9r9" id="naF-hA-ULw"/>
+                <outlet property="menuPriceLabel" destination="i3y-bp-dKk" id="UUO-4X-TD2"/>
+                <outlet property="menuStockLabel" destination="eEJ-m4-m6H" id="s4W-ED-f20"/>
+                <outlet property="menuTitleLabel" destination="vnT-Fm-7ZF" id="zey-tL-mcr"/>
+            </connections>
+            <point key="canvasLocation" x="244.27480916030532" y="13.380281690140846"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="AlfaRestoLogo" width="106" height="29"/>
+        <image name="square.and.pencil" catalog="system" width="128" height="121"/>
+        <namedColor name="MainColor">
+            <color red="0.98799997568130493" green="0.35699999332427979" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="MainGray">
+            <color red="0.32199999690055847" green="0.37999999523162842" blue="0.41999998688697815" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

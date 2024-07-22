@@ -9,7 +9,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>GeraldyK.AlfaResto-RestoApp</string>
+	<string>com.alfamart.alfagift.intern</string>
 	<key>PROJECT_ID</key>
 	<string>final-project-alfa</string>
 	<key>STORAGE_BUCKET</key>
@@ -25,6 +25,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:536141996872:ios:e07fdf83a99e630077897d</string>
+	<string>1:536141996872:ios:081d1c2952f9347f77897d</string>
+	<key>DATABASE_URL</key>
+	<string>https://final-project-alfa-default-rtdb.asia-southeast1.firebasedatabase.app</string>
 </dict>
 </plist>
