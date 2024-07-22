@@ -1,0 +1,45 @@
+//
+//  RestoRepository.swift
+//  AlfaResto-RestoApp
+//
+//  Created by Geraldy Kumara on 14/06/24.
+//
+
+import Foundation
+import RxSwift
+
+final class RestoRepositoryImpl {
+    private let authenticationServices: AuthenticationServices
+    private let firestoreServices: FirestoreServices
+    
+    init(authenticationServices: AuthenticationServices, firestoreServices: FirestoreServices) {
+        self.authenticationServices = authenticationServices
+        self.firestoreServices = firestoreServices
+    }
+}
+
+extension RestoRepositoryImpl: RestoRepository {
+    func fetchProfile(restoID: String) -> RxSwift.Single<ProfileStoreModel> {
+        return Single.create { single in
+            let firestoreReferences = FirestoreReferences.getRestoDocumentReferences(restoID: restoID)
+            firestoreReferences.getDocument(as: ProfileStoreModel.self) { result in
+                switch result {
+                case .success(let profile):
+                    single(.success(profile))
+                case .failure(let error):
+                    single(.failure(error))
+                }
+            }
+            return Disposables.create()
+        }
+    }
+    
+    func login(email: String, password: String) -> RxSwift.Observable<String> {
+        authenticationServices.login(email: email, password: password)
+    }
+    
+    func logout() -> RxSwift.Completable {
+        authenticationServices.logout()
+    }
+    
+}

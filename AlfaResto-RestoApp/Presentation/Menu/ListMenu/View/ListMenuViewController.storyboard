@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--List Menu View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="ListMenuViewController" id="Y6W-OH-hqX" customClass="ListMenuViewController" customModule="AlfaResto_RestoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Our Menu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V5s-En-rFV">
+                                <rect key="frame" x="21" y="69" width="146" height="39"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jnm-b2-pLu">
+                                <rect key="frame" x="332" y="69" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Rjy-ac-dHI"/>
+                                    <constraint firstAttribute="width" constant="40" id="fVh-bv-6Ly"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <imageReference key="image" image="plus.app.fill" catalog="system" symbolScale="large"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" scale="large"/>
+                                    <color key="baseForegroundColor" name="MainColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="addMenuButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="MCw-NL-vJ1"/>
+                                </connections>
+                            </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="NB7-5b-9b8">
+                                <rect key="frame" x="0.0" y="118" width="393" height="700"/>
+                                <color key="backgroundColor" name="SemiWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="qsR-70-364">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NoMenuImage" translatesAutoresizingMaskIntoConstraints="NO" id="dfN-2G-bWq">
+                                <rect key="frame" x="92.666666666666686" y="293" width="208" height="266"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" name="SemiWhite"/>
+                        <constraints>
+                            <constraint firstItem="dfN-2G-bWq" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="Czx-gD-3U9"/>
+                            <constraint firstItem="NB7-5b-9b8" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Dve-u5-uCT"/>
+                            <constraint firstItem="dfN-2G-bWq" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="HMn-4o-BYf"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="NB7-5b-9b8" secondAttribute="trailing" id="Okg-ou-pWd"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="NB7-5b-9b8" secondAttribute="bottom" id="eM5-pB-BK8"/>
+                            <constraint firstItem="V5s-En-rFV" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="10" id="eeU-rn-14H"/>
+                            <constraint firstItem="jnm-b2-pLu" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="10" id="hqZ-BF-te6"/>
+                            <constraint firstItem="NB7-5b-9b8" firstAttribute="top" secondItem="V5s-En-rFV" secondAttribute="bottom" constant="10" id="lXB-59-zfe"/>
+                            <constraint firstItem="V5s-En-rFV" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="21" id="lXE-Kc-S0B"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="jnm-b2-pLu" secondAttribute="trailing" constant="21" id="v1u-Ix-jqO"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="listMenuCollectionView" destination="NB7-5b-9b8" id="o8H-Zg-k26"/>
+                        <outlet property="noMenuImageView" destination="dfN-2G-bWq" id="BTw-WD-U1z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="-34"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="NoMenuImage" width="208" height="266"/>
+        <image name="plus.app.fill" catalog="system" width="128" height="114"/>
+        <namedColor name="MainColor">
+            <color red="0.98799997568130493" green="0.35699999332427979" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="SemiWhite">
+            <color red="0.92941176470588238" green="0.94509803921568625" blue="0.95686274509803926" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
