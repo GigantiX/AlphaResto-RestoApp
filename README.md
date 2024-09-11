@@ -31,7 +31,7 @@
 
 - **Firebase Firestore** - For real-time data storage and syncing across the app.
 - **Firebase Storage** - Store images, menus, and other media safely and securely.
-- **Firebase Realtime DB** - Keeping order status and live updates smooth and fast.
+- **Firebase Realtime DB** - Keeping Live Tracking smooth and fast.
 - **MessengerKit** - For seamless chat integration.
 - **Google Maps & Places API** - Enabling live tracking and location-based services.
 
@@ -41,16 +41,20 @@
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-repo/alpha-resto.git
+   git clone https://github.com/GigantiX/AlphaResto-RestoApp.git
    ```
 
-2. Install the dependencies via SPM
+2. Install the dependencies via terminal:
+   ```bash
+   cd alpha-resto
+   pod install
+   ```
 
-3. Setup Firebase and Google API Keys:
+4. Setup Firebase and Google API Keys:
    - Head over to your [Firebase Console](https://console.firebase.google.com/) and add your Firebase configuration.
    - Get your Google Maps & Places API key from [Google Cloud Console](https://console.cloud.google.com/).
 
-4. Build and run the app on Xcode:
+5. Build and run the app on Xcode:
    ```bash
    open AlphaResto.xcworkspace
    ```
