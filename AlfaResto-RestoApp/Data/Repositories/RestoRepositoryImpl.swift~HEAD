@@ -1,0 +1,27 @@
+//
+//  RestoRepository.swift
+//  AlfaResto-RestoApp
+//
+//  Created by Geraldy Kumara on 14/06/24.
+//
+
+import Foundation
+import RxSwift
+
+final class RestoRepositoryImpl {
+    private let authenticationServices: AuthenticationServices
+    
+    init(authenticationServices: AuthenticationServices) {
+        self.authenticationServices = authenticationServices
+    }
+}
+
+extension RestoRepositoryImpl: RestoRepository {
+    func login(email: String, password: String) -> RxSwift.Observable<String> {
+        authenticationServices.login(email: email, password: password)
+    }
+    
+    func logout() -> RxSwift.Completable {
+        authenticationServices.logout()
+    }
+}
