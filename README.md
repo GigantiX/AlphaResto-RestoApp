@@ -3,8 +3,8 @@
 
 **Welcome to Alpha Resto - The ultimate app for managing your online restaurant delivery service!** From live order tracking to editing menus, we've got all the tools you need to keep your store running smoothly. Whether you're chatting with customers or updating your store profile, Alpha Resto is here to make it simple.
 
-![Alpha Resto - Resto App Mockup](https://github.com/user-attachments/assets/ce691c6e-b0c8-41c1-91b2-4744f1fd182b)
 
+![Alpha Resto - Resto App](https://github.com/user-attachments/assets/7dd958a1-8524-4fad-bf2b-000019d49031)
 
 ---
 
