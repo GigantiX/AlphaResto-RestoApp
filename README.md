@@ -69,7 +69,7 @@ Feel free to contribute to the project by submitting pull requests. Feedback is 
 
 ## 📧 Contact
 
-If you have any questions or suggestions, reach out to me at **axelg.bsns@gmail.com**.
+If you have any questions or suggestions, reach out to me at **axelg.bsns@gmail.com** or **geraldy.gk@gmail.com**.
 
 ---
 
