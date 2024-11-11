@@ -138,8 +138,20 @@
 		F1AF805A2C1C426200CED6AF /* EditProfileViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1AF80592C1C426200CED6AF /* EditProfileViewController.storyboard */; };
 		F1AF805C2C1C427200CED6AF /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AF805B2C1C427200CED6AF /* EditProfileViewController.swift */; };
 		F1AF805E2C1C428300CED6AF /* EditProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AF805D2C1C428300CED6AF /* EditProfileViewModel.swift */; };
+		F1CF44252CDC9EDC001040BA /* AlfaResto_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CF44242CDC9EDC001040BA /* AlfaResto_Test.swift */; };
+		F1CF442C2CDCB512001040BA /* EditProfileViewController_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CF442B2CDCB512001040BA /* EditProfileViewController_Tests.swift */; };
 		F1D9A59C2C4A1C600008AA37 /* BadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D9A59B2C4A1C600008AA37 /* BadgeView.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F1CF44262CDC9EDC001040BA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3FD1F6B12C1831690022ACE5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3FD1F6B82C1831690022ACE5;
+			remoteInfo = "AlfaResto-RestoApp";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0E8E210FEF787CB4F5EA4CE6 /* Pods_AlfaResto_RestoApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AlfaResto_RestoApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -280,6 +292,9 @@
 		F1AF80592C1C426200CED6AF /* EditProfileViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditProfileViewController.storyboard; sourceTree = "<group>"; };
 		F1AF805B2C1C427200CED6AF /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		F1AF805D2C1C428300CED6AF /* EditProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewModel.swift; sourceTree = "<group>"; };
+		F1CF44222CDC9EDC001040BA /* AlfaResto_Test.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlfaResto_Test.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1CF44242CDC9EDC001040BA /* AlfaResto_Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlfaResto_Test.swift; sourceTree = "<group>"; };
+		F1CF442B2CDCB512001040BA /* EditProfileViewController_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController_Tests.swift; sourceTree = "<group>"; };
 		F1D9A59B2C4A1C600008AA37 /* BadgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -290,6 +305,13 @@
 			files = (
 				27DA067A1DF5E0867A6AEFE5 /* Pods_AlfaResto_RestoApp.framework in Frameworks */,
 				D81E861C1F1EA935CD74BCCB /* Pods_AlfaResto_RestoApp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F1CF441F2CDC9EDC001040BA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -574,6 +596,7 @@
 			isa = PBXGroup;
 			children = (
 				3FD1F6BB2C1831690022ACE5 /* AlfaResto-RestoApp */,
+				F1CF44232CDC9EDC001040BA /* AlfaResto_Test */,
 				3FD1F6BA2C1831690022ACE5 /* Products */,
 				AB5CB10B0F10A9CAF645E102 /* Pods */,
 				5FB5E9FA4FF7BADDB65D420E /* Firestore */,
@@ -586,6 +609,7 @@
 			isa = PBXGroup;
 			children = (
 				3FD1F6B92C1831690022ACE5 /* AlfaResto-RestoApp.app */,
+				F1CF44222CDC9EDC001040BA /* AlfaResto_Test.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1153,6 +1177,15 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		F1CF44232CDC9EDC001040BA /* AlfaResto_Test */ = {
+			isa = PBXGroup;
+			children = (
+				F1CF44242CDC9EDC001040BA /* AlfaResto_Test.swift */,
+				F1CF442B2CDCB512001040BA /* EditProfileViewController_Tests.swift */,
+			);
+			path = AlfaResto_Test;
+			sourceTree = "<group>";
+		};
 		F1D9A59A2C4A1C4A0008AA37 /* Badge */ = {
 			isa = PBXGroup;
 			children = (
@@ -1184,6 +1217,24 @@
 			productReference = 3FD1F6B92C1831690022ACE5 /* AlfaResto-RestoApp.app */;
 			productType = "com.apple.product-type.application";
 		};
+		F1CF44212CDC9EDC001040BA /* AlfaResto_Test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F1CF44282CDC9EDC001040BA /* Build configuration list for PBXNativeTarget "AlfaResto_Test" */;
+			buildPhases = (
+				F1CF441E2CDC9EDC001040BA /* Sources */,
+				F1CF441F2CDC9EDC001040BA /* Frameworks */,
+				F1CF44202CDC9EDC001040BA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F1CF44272CDC9EDC001040BA /* PBXTargetDependency */,
+			);
+			name = AlfaResto_Test;
+			productName = AlfaResto_Test;
+			productReference = F1CF44222CDC9EDC001040BA /* AlfaResto_Test.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -1191,11 +1242,15 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1520;
+				LastSwiftUpdateCheck = 1540;
 				LastUpgradeCheck = 1520;
 				TargetAttributes = {
 					3FD1F6B82C1831690022ACE5 = {
 						CreatedOnToolsVersion = 15.2;
+					};
+					F1CF44212CDC9EDC001040BA = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 3FD1F6B82C1831690022ACE5;
 					};
 				};
 			};
@@ -1213,6 +1268,7 @@
 			projectRoot = "";
 			targets = (
 				3FD1F6B82C1831690022ACE5 /* AlfaResto-RestoApp */,
+				F1CF44212CDC9EDC001040BA /* AlfaResto_Test */,
 			);
 		};
 /* End PBXProject section */
@@ -1244,6 +1300,13 @@
 				3F70CB282C252E33004C0309 /* OrderDetailViewController.storyboard in Resources */,
 				3FD1F6C62C18316B0022ACE5 /* Assets.xcassets in Resources */,
 				F19DCC292C1BEF1B003C740B /* ProfileViewController.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F1CF44202CDC9EDC001040BA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1424,7 +1487,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F1CF441E2CDC9EDC001040BA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F1CF442C2CDCB512001040BA /* EditProfileViewController_Tests.swift in Sources */,
+				F1CF44252CDC9EDC001040BA /* AlfaResto_Test.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F1CF44272CDC9EDC001040BA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3FD1F6B82C1831690022ACE5 /* AlfaResto-RestoApp */;
+			targetProxy = F1CF44262CDC9EDC001040BA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		3FD1F6C72C18316B0022ACE5 /* LaunchScreen.storyboard */ = {
@@ -1567,7 +1647,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = UKUGHUS3M8;
+				DEVELOPMENT_TEAM = M7R6QZ3L57;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "AlfaResto-RestoApp/Resources/Info.plist";
@@ -1603,7 +1683,7 @@
 				CODE_SIGN_ENTITLEMENTS = "AlfaResto-RestoApp/AlfaResto-RestoApp.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = UKUGHUS3M8;
+				DEVELOPMENT_TEAM = M7R6QZ3L57;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "AlfaResto-RestoApp/Resources/Info.plist";
@@ -1630,6 +1710,44 @@
 			};
 			name = Release;
 		};
+		F1CF44292CDC9EDC001040BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = M7R6QZ3L57;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gli.AlfaResto-Test";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AlfaResto-RestoApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/AlfaResto-RestoApp";
+			};
+			name = Debug;
+		};
+		F1CF442A2CDC9EDC001040BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = M7R6QZ3L57;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gli.AlfaResto-Test";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AlfaResto-RestoApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/AlfaResto-RestoApp";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1647,6 +1765,15 @@
 			buildConfigurations = (
 				3FD1F6CE2C18316B0022ACE5 /* Debug */,
 				3FD1F6CF2C18316B0022ACE5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F1CF44282CDC9EDC001040BA /* Build configuration list for PBXNativeTarget "AlfaResto_Test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F1CF44292CDC9EDC001040BA /* Debug */,
+				F1CF442A2CDC9EDC001040BA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -45,6 +45,10 @@ class ProfileViewController: UIViewController {
     @IBAction func didSegmentedPressed(_ sender: UISegmentedControl) {
         updateTemporaryClose()
     }
+    
+    func add(a: Int, b: Int) -> Int {
+        return a + b
+    }
 }
 
 private extension ProfileViewController {

@@ -28,6 +28,30 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES"
       shouldAutocreateTestPlan = "YES">
+      <Testables>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "F1CF44042CD4E2B5001040BA"
+               BuildableName = "AlfaResto-RestoApp_Tests.xctest"
+               BlueprintName = "AlfaResto-RestoApp_Tests"
+               ReferencedContainer = "container:AlfaResto-RestoApp.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "F1CF44212CDC9EDC001040BA"
+               BuildableName = "AlfaResto_Test.xctest"
+               BlueprintName = "AlfaResto_Test"
+               ReferencedContainer = "container:AlfaResto-RestoApp.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+      </Testables>
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"

@@ -133,7 +133,7 @@ extension EditProfileViewController: UIImagePickerControllerDelegate, UINavigati
     }
 }
 
-private extension EditProfileViewController {
+internal extension EditProfileViewController {
     func setupLoadingView() {
         view.addSubview(loadingView)
         loadingView.isHidden = true
@@ -229,6 +229,11 @@ private extension EditProfileViewController {
             .disposed(by: viewModel.disposeBag)
     }
     
+    func isSaveButtonEnable() {
+        guard let saveProfileButton else { return }
+        saveProfileButton.isEnabled = isSavable()
+    }
+    
     func isSavable() -> Bool {
         if let phoneNumber = textFieldPhoneNumber.text,
            let address = textViewAddress.text,
@@ -256,9 +261,6 @@ private extension EditProfileViewController {
         return false
     }
     
-    func isSaveButtonEnable() {
-        saveProfileButton.isEnabled = isSavable()
-    }
     
     func endTextFieldEditing() {
         textViewAddress.endEditing(true)
