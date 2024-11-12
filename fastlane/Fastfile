@@ -25,7 +25,7 @@ platform :ios do
     )
   end
 
-  desc "Run Build For Testing" 
+  desc "Build & Run Unit Testing" 
   lane :build_for_testing do
     run_tests(
       workspace: "AlfaResto-RestoApp.xcworkspace",
@@ -35,25 +35,6 @@ platform :ios do
       result_bundle: true,
       output_xctestrun: true,
       build_for_testing: true,
-      device: "iPhone 14 Pro Max",
-      buildlog_path: "./fastlane/build_for_testing/buildlog_path",
-      derived_data_path: "./fastlane/build_for_testing/derived_data_path",
-      output_directory: "./fastlane/build_for_testing/output_directory"
-   )
-  end
-
-  desc "Run Unit Testings"
-  lane :unit_testing do
-    run_tests(
-      workspace: "AlfaResto-RestoApp.xcworkspace",
-      scheme: "AlfaResto-RestoApp",
-      configuration: "debug",
-      clean: false,
-      skip_slack: true,
-      code_coverage: true,
-      result_bundle: true,
-      output_xctestrun: true,
-      test_without_building: true,
       device: "iPhone 14 Pro Max",
       buildlog_path: "./fastlane/build_for_testing/buildlog_path",
       derived_data_path: "./fastlane/build_for_testing/derived_data_path",
