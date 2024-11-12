@@ -16,7 +16,7 @@ target 'AlfaResto-RestoApp' do
   pod 'Kingfisher'
   pod 'IQKeyboardManagerSwift'
   pod 'GoogleMaps'
-  pod 'Alamofire'
+  pod 'Alamofire', '5.7.1'
   pod 'FirebaseDatabase'
   pod 'MessageKit'
 
