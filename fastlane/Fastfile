@@ -48,7 +48,7 @@ platform :ios do
       workspace: "AlfaResto-RestoApp.xcworkspace",
       scheme: "AlfaResto-RestoApp",
       clean: true,
-      varbose: true,
+      verbose: true,
       skip_slack: true,
       result_bundle: true,
       output_xctestrun: true,
