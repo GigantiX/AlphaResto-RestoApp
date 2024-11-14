@@ -26,47 +26,14 @@ platform :ios do
   end
 
   desc "Build & Run Unit Testing" 
-  lane :build_for_testing do
-    run_tests(
-      workspace: "AlfaResto-RestoApp.xcworkspace",
-      scheme: "AlfaResto-RestoApp",
-      clean: true,
-      skip_slack: true,
-      result_bundle: true,
-      output_xctestrun: true,
-      build_for_testing: true,
-      device: "iPhone 14 Pro Max",
-      buildlog_path: "./fastlane/build_for_testing/buildlog_path",
-      derived_data_path: "./fastlane/build_for_testing/derived_data_path",
-      output_directory: "./fastlane/build_for_testing/output_directory"
-   )
-  end
-
-  desc "Build & Run Unit Testing v2" 
   lane :start_testing do
     scan(
-      workspace: "AlfaResto-RestoApp.xcworkspace",
       scheme: "AlfaResto-RestoApp",
-      clean: true,
-      verbose: true,
-      only_testing: ["AlfaResto_Test"],
-      skip_slack: true,
-      result_bundle: true,
-      output_xctestrun: true,
-      build_for_testing: true,
-      devices: ["iPhone 14 Pro Max"], # Note: 'device' is changed to 'devices'
+      workspace: "AlfaResto-RestoApp.xcworkspace",
+      device: "iPhone 15",
       buildlog_path: "./fastlane/build_for_testing/buildlog_path",
       derived_data_path: "./fastlane/build_for_testing/derived_data_path",
       output_directory: "./fastlane/build_for_testing/output_directory"
-    )
-  end
-
-  desc "Xcodebuid"
-  lane :run_my_tests do
-    scan(
-      scheme: "AlfaResto-RestoApp",
-      workspace: "AlfaResto-RestoApp.xcworkspace",
-      device: "iPhone 15",  
     )
   end
 end
