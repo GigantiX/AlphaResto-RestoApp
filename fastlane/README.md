@@ -23,13 +23,13 @@ For _fastlane_ installation instructions, see [Installing _fastlane_](https://do
 
 Run Pod Install
 
-### ios build_for_testing
+### ios start_testing
 
 ```sh
-[bundle exec] fastlane ios build_for_testing
+[bundle exec] fastlane ios start_testing
 ```
 
-Run Build For Testing
+Build & Run Unit Testing
 
 ----
 
