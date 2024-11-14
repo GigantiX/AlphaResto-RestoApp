@@ -60,4 +60,14 @@ platform :ios do
       output_directory: "./fastlane/build_for_testing/output_directory"
     )
   end
+
+  desc "Xcodebuid"
+  lane :run_my_tests do
+    scan(
+      scheme: "AlfaResto-RestoApp",
+      workspace: "AlfaResto-RestoApp.xcworkspace",
+      device: "iPhone 15",
+      os: "17.4"     
+    )
+  end
 end
