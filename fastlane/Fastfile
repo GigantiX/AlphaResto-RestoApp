@@ -66,8 +66,7 @@ platform :ios do
     scan(
       scheme: "AlfaResto-RestoApp",
       workspace: "AlfaResto-RestoApp.xcworkspace",
-      device: "iPhone 15",
-      os: "17.4"     
+      device: "iPhone 15",  
     )
   end
 end
