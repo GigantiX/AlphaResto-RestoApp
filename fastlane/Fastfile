@@ -49,6 +49,7 @@ platform :ios do
       scheme: "AlfaResto-RestoApp",
       clean: true,
       verbose: true,
+      include: ["AlfaResto-Test"],
       skip_slack: true,
       result_bundle: true,
       output_xctestrun: true,
