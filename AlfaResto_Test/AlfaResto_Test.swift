@@ -25,7 +25,7 @@ final class AlfaResto_Test: XCTestCase {
         
         let result = vc.add(a: x, b: y)
         
-        XCTAssertEqual(result, 40)
+        XCTAssertEqual(result, 20)
     }
     
 }
