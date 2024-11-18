@@ -138,8 +138,8 @@
 		F1AF805A2C1C426200CED6AF /* EditProfileViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1AF80592C1C426200CED6AF /* EditProfileViewController.storyboard */; };
 		F1AF805C2C1C427200CED6AF /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AF805B2C1C427200CED6AF /* EditProfileViewController.swift */; };
 		F1AF805E2C1C428300CED6AF /* EditProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AF805D2C1C428300CED6AF /* EditProfileViewModel.swift */; };
+		F1C508472CEB3CB700C1C129 /* EditProfileVC_UnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C508462CEB3CB700C1C129 /* EditProfileVC_UnitTest.swift */; };
 		F1CF44252CDC9EDC001040BA /* AlfaResto_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CF44242CDC9EDC001040BA /* AlfaResto_Test.swift */; };
-		F1CF442C2CDCB512001040BA /* EditProfileViewController_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CF442B2CDCB512001040BA /* EditProfileViewController_Tests.swift */; };
 		F1D9A59C2C4A1C600008AA37 /* BadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D9A59B2C4A1C600008AA37 /* BadgeView.swift */; };
 /* End PBXBuildFile section */
 
@@ -292,9 +292,9 @@
 		F1AF80592C1C426200CED6AF /* EditProfileViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditProfileViewController.storyboard; sourceTree = "<group>"; };
 		F1AF805B2C1C427200CED6AF /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		F1AF805D2C1C428300CED6AF /* EditProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewModel.swift; sourceTree = "<group>"; };
+		F1C508462CEB3CB700C1C129 /* EditProfileVC_UnitTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileVC_UnitTest.swift; sourceTree = "<group>"; };
 		F1CF44222CDC9EDC001040BA /* AlfaResto_Test.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlfaResto_Test.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1CF44242CDC9EDC001040BA /* AlfaResto_Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlfaResto_Test.swift; sourceTree = "<group>"; };
-		F1CF442B2CDCB512001040BA /* EditProfileViewController_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController_Tests.swift; sourceTree = "<group>"; };
 		F1D9A59B2C4A1C600008AA37 /* BadgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -1181,7 +1181,7 @@
 			isa = PBXGroup;
 			children = (
 				F1CF44242CDC9EDC001040BA /* AlfaResto_Test.swift */,
-				F1CF442B2CDCB512001040BA /* EditProfileViewController_Tests.swift */,
+				F1C508462CEB3CB700C1C129 /* EditProfileVC_UnitTest.swift */,
 			);
 			path = AlfaResto_Test;
 			sourceTree = "<group>";
@@ -1491,7 +1491,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F1CF442C2CDCB512001040BA /* EditProfileViewController_Tests.swift in Sources */,
+				F1C508472CEB3CB700C1C129 /* EditProfileVC_UnitTest.swift in Sources */,
 				F1CF44252CDC9EDC001040BA /* AlfaResto_Test.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
