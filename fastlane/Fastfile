@@ -30,6 +30,7 @@ platform :ios do
     scan(
       scheme: "AlfaResto-RestoApp",
       workspace: "AlfaResto-RestoApp.xcworkspace",
+      clean: true,
       device: "iPhone 15",
       buildlog_path: "./fastlane/build_for_testing/buildlog_path",
       derived_data_path: "./fastlane/build_for_testing/derived_data_path",
