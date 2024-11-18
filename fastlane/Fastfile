@@ -19,7 +19,7 @@ platform :ios do
   desc "Run Pod Install"
   lane :pod_install do
     cocoapods(
-      clean_install: false,
+      clean_install: true,
       use_bundle_exec: true,
       repo_update: true
     )
