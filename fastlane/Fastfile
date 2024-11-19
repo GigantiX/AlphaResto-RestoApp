@@ -21,7 +21,7 @@ platform :ios do
     cocoapods(
       clean_install: false,
       use_bundle_exec: true,
-      repo_update: true
+      repo_update: false
     )
   end
 
