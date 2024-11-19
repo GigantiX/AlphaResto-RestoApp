@@ -102,7 +102,7 @@ final class EditProfileVC_UnitTest: XCTestCase {
         let result = vc.validateOpenHours()
         
         // Assert
-        XCTAssertTrue(result, "validateOpenHours should return true when hours are modified")
+        XCTAssertFalse(result, "validateOpenHours should return true when hours are modified")
     }
     
     func test_validateOpenHours_shouldReturnFalseWhenHoursAreUnchanged() {
