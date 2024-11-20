@@ -31,8 +31,8 @@ platform :ios do
       scheme: "AlfaResto-RestoApp",
       workspace: "AlfaResto-RestoApp.xcworkspace",
       clean: true,
-      parallel_testing: true,
       device: "iPhone 15",
+      xcodebuild_formatter: "xcbeautify",
       buildlog_path: "./fastlane/build_for_testing/buildlog_path",
       derived_data_path: "./fastlane/build_for_testing/derived_data_path",
       output_directory: "./fastlane/build_for_testing/output_directory"
