@@ -32,7 +32,8 @@ platform :ios do
       workspace: "AlfaResto-RestoApp.xcworkspace",
       clean: true,
       device: "iPhone 15",
-      output_types: "html,junit",
+      xcodebuild_formatter: "/opt/homebrew/bin/xcbeautify",
+      output_types: "html"
       buildlog_path: "./fastlane/build_for_testing/buildlog_path",
       derived_data_path: "./fastlane/build_for_testing/derived_data_path",
       output_directory: "./fastlane/build_for_testing/output_directory"
