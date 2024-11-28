@@ -141,11 +141,20 @@
 		F1C508472CEB3CB700C1C129 /* EditProfileVC_UnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C508462CEB3CB700C1C129 /* EditProfileVC_UnitTest.swift */; };
 		F1C508492CEB41E200C1C129 /* EditProfileVC_UnitTest2.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C508482CEB41E200C1C129 /* EditProfileVC_UnitTest2.swift */; };
 		F1CF44252CDC9EDC001040BA /* AlfaResto_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CF44242CDC9EDC001040BA /* AlfaResto_Test.swift */; };
+		F1CF77652CF8077300A811E4 /* AlfaResto_RestoAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CF77642CF8077200A811E4 /* AlfaResto_RestoAppUITests.swift */; };
+		F1CF77672CF8077300A811E4 /* AlfaResto_RestoAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CF77662CF8077300A811E4 /* AlfaResto_RestoAppUITestsLaunchTests.swift */; };
 		F1D9A59C2C4A1C600008AA37 /* BadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D9A59B2C4A1C600008AA37 /* BadgeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		F1CF44262CDC9EDC001040BA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3FD1F6B12C1831690022ACE5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3FD1F6B82C1831690022ACE5;
+			remoteInfo = "AlfaResto-RestoApp";
+		};
+		F1CF77682CF8077300A811E4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 3FD1F6B12C1831690022ACE5 /* Project object */;
 			proxyType = 1;
@@ -297,6 +306,9 @@
 		F1C508482CEB41E200C1C129 /* EditProfileVC_UnitTest2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileVC_UnitTest2.swift; sourceTree = "<group>"; };
 		F1CF44222CDC9EDC001040BA /* AlfaResto_Test.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlfaResto_Test.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1CF44242CDC9EDC001040BA /* AlfaResto_Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlfaResto_Test.swift; sourceTree = "<group>"; };
+		F1CF77622CF8077200A811E4 /* AlfaResto-RestoAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AlfaResto-RestoAppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1CF77642CF8077200A811E4 /* AlfaResto_RestoAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlfaResto_RestoAppUITests.swift; sourceTree = "<group>"; };
+		F1CF77662CF8077300A811E4 /* AlfaResto_RestoAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlfaResto_RestoAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		F1D9A59B2C4A1C600008AA37 /* BadgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -311,6 +323,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		F1CF441F2CDC9EDC001040BA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F1CF775F2CF8077200A811E4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -599,6 +618,7 @@
 			children = (
 				3FD1F6BB2C1831690022ACE5 /* AlfaResto-RestoApp */,
 				F1CF44232CDC9EDC001040BA /* AlfaResto_Test */,
+				F1CF77632CF8077200A811E4 /* AlfaResto-RestoAppUITests */,
 				3FD1F6BA2C1831690022ACE5 /* Products */,
 				AB5CB10B0F10A9CAF645E102 /* Pods */,
 				5FB5E9FA4FF7BADDB65D420E /* Firestore */,
@@ -612,6 +632,7 @@
 			children = (
 				3FD1F6B92C1831690022ACE5 /* AlfaResto-RestoApp.app */,
 				F1CF44222CDC9EDC001040BA /* AlfaResto_Test.xctest */,
+				F1CF77622CF8077200A811E4 /* AlfaResto-RestoAppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1197,6 +1218,15 @@
 			path = AlfaResto_Test;
 			sourceTree = "<group>";
 		};
+		F1CF77632CF8077200A811E4 /* AlfaResto-RestoAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F1CF77642CF8077200A811E4 /* AlfaResto_RestoAppUITests.swift */,
+				F1CF77662CF8077300A811E4 /* AlfaResto_RestoAppUITestsLaunchTests.swift */,
+			);
+			path = "AlfaResto-RestoAppUITests";
+			sourceTree = "<group>";
+		};
 		F1D9A59A2C4A1C4A0008AA37 /* Badge */ = {
 			isa = PBXGroup;
 			children = (
@@ -1246,6 +1276,24 @@
 			productReference = F1CF44222CDC9EDC001040BA /* AlfaResto_Test.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		F1CF77612CF8077200A811E4 /* AlfaResto-RestoAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F1CF776C2CF8077300A811E4 /* Build configuration list for PBXNativeTarget "AlfaResto-RestoAppUITests" */;
+			buildPhases = (
+				F1CF775E2CF8077200A811E4 /* Sources */,
+				F1CF775F2CF8077200A811E4 /* Frameworks */,
+				F1CF77602CF8077200A811E4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F1CF77692CF8077300A811E4 /* PBXTargetDependency */,
+			);
+			name = "AlfaResto-RestoAppUITests";
+			productName = "AlfaResto-RestoAppUITests";
+			productReference = F1CF77622CF8077200A811E4 /* AlfaResto-RestoAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -1260,6 +1308,10 @@
 						CreatedOnToolsVersion = 15.2;
 					};
 					F1CF44212CDC9EDC001040BA = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 3FD1F6B82C1831690022ACE5;
+					};
+					F1CF77612CF8077200A811E4 = {
 						CreatedOnToolsVersion = 15.4;
 						TestTargetID = 3FD1F6B82C1831690022ACE5;
 					};
@@ -1280,6 +1332,7 @@
 			targets = (
 				3FD1F6B82C1831690022ACE5 /* AlfaResto-RestoApp */,
 				F1CF44212CDC9EDC001040BA /* AlfaResto_Test */,
+				F1CF77612CF8077200A811E4 /* AlfaResto-RestoAppUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -1315,6 +1368,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		F1CF44202CDC9EDC001040BA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F1CF77602CF8077200A811E4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1508,6 +1568,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F1CF775E2CF8077200A811E4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F1CF77672CF8077300A811E4 /* AlfaResto_RestoAppUITestsLaunchTests.swift in Sources */,
+				F1CF77652CF8077300A811E4 /* AlfaResto_RestoAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -1515,6 +1584,11 @@
 			isa = PBXTargetDependency;
 			target = 3FD1F6B82C1831690022ACE5 /* AlfaResto-RestoApp */;
 			targetProxy = F1CF44262CDC9EDC001040BA /* PBXContainerItemProxy */;
+		};
+		F1CF77692CF8077300A811E4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3FD1F6B82C1831690022ACE5 /* AlfaResto-RestoApp */;
+			targetProxy = F1CF77682CF8077300A811E4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1760,6 +1834,42 @@
 			};
 			name = Release;
 		};
+		F1CF776A2CF8077300A811E4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = M7R6QZ3L57;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gli.AlfaResto-RestoAppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "AlfaResto-RestoApp";
+			};
+			name = Debug;
+		};
+		F1CF776B2CF8077300A811E4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = M7R6QZ3L57;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gli.AlfaResto-RestoAppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "AlfaResto-RestoApp";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1786,6 +1896,15 @@
 			buildConfigurations = (
 				F1CF44292CDC9EDC001040BA /* Debug */,
 				F1CF442A2CDC9EDC001040BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F1CF776C2CF8077300A811E4 /* Build configuration list for PBXNativeTarget "AlfaResto-RestoAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F1CF776A2CF8077300A811E4 /* Debug */,
+				F1CF776B2CF8077300A811E4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

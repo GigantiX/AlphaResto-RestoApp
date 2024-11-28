@@ -51,6 +51,17 @@
                ReferencedContainer = "container:AlfaResto-RestoApp.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "F1CF77612CF8077200A811E4"
+               BuildableName = "AlfaResto-RestoAppUITests.xctest"
+               BlueprintName = "AlfaResto-RestoAppUITests"
+               ReferencedContainer = "container:AlfaResto-RestoApp.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
