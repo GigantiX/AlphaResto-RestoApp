@@ -1,4 +1,3 @@
-
 //
 //  AlfaResto_RestoAppUITests.swift
 //  AlfaResto-RestoAppUITests
@@ -14,10 +13,10 @@ final class AlfaResto_RestoAppUITests: XCTestCase {
         continueAfterFailure = false
         
         let app = XCUIApplication()
-            app.launch()
+        app.launch()
 
-            // Attempt to log out if already logged in
-            try? attemptLogout(app: app)
+        // Attempt to log out if already logged in
+        try? attemptLogout(app: app)
     }
     
     func attemptLogout(app: XCUIApplication) throws {
@@ -50,24 +49,23 @@ final class AlfaResto_RestoAppUITests: XCTestCase {
     }
 
     func login(app: XCUIApplication) {
-            let emailTextField = app.textFields["example@email.com"]
-            XCTAssertTrue(emailTextField.exists, "Email text field should exist")
-            emailTextField.tap()
-            emailTextField.typeText("admin@alfaresto.com")
+        let emailTextField = app.textFields["example@email.com"]
+        XCTAssertTrue(emailTextField.exists, "Email text field should exist")
+        emailTextField.tap()
+        emailTextField.typeText("admin@alfaresto.com")
         
-        let doneButton = app.toolbars["Toolbar"].buttons["Done"]
-        doneButton.tap()
-            
-            let passwordSecureField = app.secureTextFields["**********"]
-            XCTAssertTrue(passwordSecureField.exists, "Password secure text field should exist")
-            passwordSecureField.tap()
-            passwordSecureField.typeText("admin123")
+        tapDoneButtonIfPresent(app: app)
         
-        doneButton.tap()
+        let passwordSecureField = app.secureTextFields["**********"]
+        XCTAssertTrue(passwordSecureField.exists, "Password secure text field should exist")
+        passwordSecureField.tap()
+        passwordSecureField.typeText("admin123")
+        
+        tapDoneButtonIfPresent(app: app)
         
         let loginButton = app.buttons["Login"]
-            XCTAssertTrue(loginButton.exists, "Login button should exist")
-            loginButton.tap()
+        XCTAssertTrue(loginButton.exists, "Login button should exist")
+        loginButton.tap()
     }
 
     @MainActor
@@ -88,16 +86,15 @@ final class AlfaResto_RestoAppUITests: XCTestCase {
         login(app: app)
         
         let tabBar = app.tabBars["Tab Bar"]
-            let existsPredicate = NSPredicate(format: "exists == true")
-            expectation(for: existsPredicate, evaluatedWith: tabBar, handler: nil)
+        let existsPredicate = NSPredicate(format: "exists == true")
+        expectation(for: existsPredicate, evaluatedWith: tabBar, handler: nil)
 
-            waitForExpectations(timeout: 5, handler: nil)
+        waitForExpectations(timeout: 5, handler: nil)
         
         editItemWithDynamicConditions(app: app)
     }
     
     func editItemWithDynamicConditions(app: XCUIApplication) {
-
         let tabBar = app.tabBars["Tab Bar"]
         XCTAssertTrue(tabBar.buttons["Menu"].exists, "Menu tab should exist")
         tabBar.buttons["Menu"].tap()
@@ -137,22 +134,21 @@ final class AlfaResto_RestoAppUITests: XCTestCase {
         itemNameField.tap()
         itemNameField.clearAndEnterText(newMenuName)
         
-        let doneButton = app.toolbars["Toolbar"].buttons["Done"]
-        doneButton.tap()
+        tapDoneButtonIfPresent(app: app)
 
         let priceField = app.textFields.element(boundBy: 1) // Assuming price field is the first text field
         XCTAssertTrue(priceField.exists, "Price text field should exist")
         priceField.tap()
         priceField.clearAndEnterText(newPrice)
         
-        doneButton.tap()
+        tapDoneButtonIfPresent(app: app)
 
         let stockField = app.textFields.element(boundBy: 2) // Assuming stock field is the second text field
         XCTAssertTrue(stockField.exists, "Stock text field should exist")
         stockField.tap()
         stockField.clearAndEnterText(newStock)
         
-        doneButton.tap()
+        tapDoneButtonIfPresent(app: app)
 
         // Save the updates
         let saveButton = app.buttons["Save"]
@@ -165,8 +161,8 @@ final class AlfaResto_RestoAppUITests: XCTestCase {
         editedAlert.buttons["Okay"].tap()
 
         let profileButton = tabBar.buttons["Profile"]
-            XCTAssertTrue(profileButton.waitForExistence(timeout: 5), "Profile button should appear after edit")
-            profileButton.tap()
+        XCTAssertTrue(profileButton.waitForExistence(timeout: 5), "Profile button should appear after edit")
+        profileButton.tap()
         
         let moreButton = app.buttons["More"]
         XCTAssertTrue(moreButton.exists, "More button should exist")
@@ -179,6 +175,13 @@ final class AlfaResto_RestoAppUITests: XCTestCase {
         let logoutAlert = app.alerts["Logout"]
         XCTAssertTrue(logoutAlert.exists, "Logout alert should appear")
         logoutAlert.buttons["Okay"].tap()
+    }
+
+    func tapDoneButtonIfPresent(app: XCUIApplication) {
+        let doneButton = app.toolbars["Toolbar"].buttons["Done"]
+        if doneButton.exists {
+            doneButton.tap()
+        }
     }
 }
 
