@@ -44,15 +44,16 @@ platform :ios do
   desc "Run UI Tests"
   lane :run_ui_tests do
     scan(
-      scheme: "AlfaResto_RestoAppUITests",   # Specify the UITests scheme
+      scheme: "AlfaResto-RestoApp",
       workspace: "AlfaResto-RestoApp.xcworkspace",
       clean: true,
-      device: "iPhone 15",                    # You can change this to any simulator/device
+      device: "iPhone 15",
       xcodebuild_formatter: "/opt/homebrew/bin/xcbeautify",
       output_types: "html",
       buildlog_path: "./fastlane/build_for_testing/buildlog_path",
       derived_data_path: "./fastlane/build_for_testing/derived_data_path",
-      output_directory: "./fastlane/build_for_testing/output_directory"
+      output_directory: "./fastlane/build_for_testing/output_directory",
+      only_testing: ["AlfaResto-RestoAppUITests"]
     )
   end
 

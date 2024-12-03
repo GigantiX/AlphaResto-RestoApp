@@ -31,6 +31,14 @@ Run Pod Install
 
 Build & Run Unit Testing
 
+### ios run_ui_tests
+
+```sh
+[bundle exec] fastlane ios run_ui_tests
+```
+
+Run UI Tests
+
 ----
 
 This README.md is auto-generated and will be re-generated every time [_fastlane_](https://fastlane.tools) is run.
