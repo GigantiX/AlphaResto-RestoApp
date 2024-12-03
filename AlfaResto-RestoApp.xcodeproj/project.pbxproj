@@ -1200,17 +1200,9 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		F1C5084A2CEC392100C1C129 /* UITest */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = UITest;
-			sourceTree = "<group>";
-		};
 		F1CF44232CDC9EDC001040BA /* AlfaResto_Test */ = {
 			isa = PBXGroup;
 			children = (
-				F1C5084A2CEC392100C1C129 /* UITest */,
 				F1CF44242CDC9EDC001040BA /* AlfaResto_Test.swift */,
 				F1C508462CEB3CB700C1C129 /* EditProfileVC_UnitTest.swift */,
 				F1C508482CEB41E200C1C129 /* EditProfileVC_UnitTest2.swift */,
