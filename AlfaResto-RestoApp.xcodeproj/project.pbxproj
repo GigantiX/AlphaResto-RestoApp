@@ -111,6 +111,7 @@
 		3FD1F73A2C21325E0022ACE5 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD1F7392C21325E0022ACE5 /* AppError.swift */; };
 		3FD1F73C2C2132C20022ACE5 /* MenuUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD1F73B2C2132C20022ACE5 /* MenuUseCase.swift */; };
 		3FD1F73E2C2137A40022ACE5 /* Array+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD1F73D2C2137A40022ACE5 /* Array+extensions.swift */; };
+		9E7BAFE2971D87D5BEC5F1B2 /* Pods_AlfaResto_Test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 844A29A8A63EFF97A3CBA04E /* Pods_AlfaResto_Test.framework */; };
 		D81E861C1F1EA935CD74BCCB /* Pods_AlfaResto_RestoApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43EC3BF3A890069FC54CB413 /* Pods_AlfaResto_RestoApp.framework */; };
 		F12BFBF92C22BB5E00738716 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12BFBF82C22BB5E00738716 /* Alert.swift */; };
 		F13B28FA2C3289A900E0BB73 /* ChatRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13B28F92C3289A900E0BB73 /* ChatRepository.swift */; };
@@ -118,6 +119,7 @@
 		F13B29002C32E7C000E0BB73 /* RestoChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13B28FF2C32E7C000E0BB73 /* RestoChatViewController.swift */; };
 		F13B29022C32E7D700E0BB73 /* RestoChatViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F13B29012C32E7D600E0BB73 /* RestoChatViewController.storyboard */; };
 		F13B29042C339C8300E0BB73 /* ChatViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F13B29032C339C8300E0BB73 /* ChatViewController.storyboard */; };
+		F14AA2862CFEAC2E00FF3DCA /* LoginViewModel_UnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14AA2852CFEAC2E00FF3DCA /* LoginViewModel_UnitTest.swift */; };
 		F14F783D2C2FB933006018BE /* ChatsRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14F783C2C2FB933006018BE /* ChatsRepositoryImpl.swift */; };
 		F14F783F2C2FBA42006018BE /* Chats.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14F783E2C2FBA42006018BE /* Chats.swift */; };
 		F14F78412C306A08006018BE /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14F78402C306A08006018BE /* Message.swift */; };
@@ -264,13 +266,17 @@
 		3FD1F73D2C2137A40022ACE5 /* Array+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+extensions.swift"; sourceTree = "<group>"; };
 		43EC3BF3A890069FC54CB413 /* Pods_AlfaResto_RestoApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AlfaResto_RestoApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CE26D7C96ECA761732C9C50 /* Pods-AlfaResto-RestoApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlfaResto-RestoApp.release.xcconfig"; path = "Target Support Files/Pods-AlfaResto-RestoApp/Pods-AlfaResto-RestoApp.release.xcconfig"; sourceTree = "<group>"; };
+		844A29A8A63EFF97A3CBA04E /* Pods_AlfaResto_Test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AlfaResto_Test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D0FDE541254C354B06D0A8E /* Pods-AlfaResto_Test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlfaResto_Test.debug.xcconfig"; path = "Target Support Files/Pods-AlfaResto_Test/Pods-AlfaResto_Test.debug.xcconfig"; sourceTree = "<group>"; };
 		B28D844DCC813719E4483F2A /* Pods-AlfaResto-RestoApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlfaResto-RestoApp.debug.xcconfig"; path = "Target Support Files/Pods-AlfaResto-RestoApp/Pods-AlfaResto-RestoApp.debug.xcconfig"; sourceTree = "<group>"; };
+		E140E390CCC187618752576A /* Pods-AlfaResto_Test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlfaResto_Test.release.xcconfig"; path = "Target Support Files/Pods-AlfaResto_Test/Pods-AlfaResto_Test.release.xcconfig"; sourceTree = "<group>"; };
 		F12BFBF82C22BB5E00738716 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		F13B28F92C3289A900E0BB73 /* ChatRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRepository.swift; sourceTree = "<group>"; };
 		F13B28FB2C328B0300E0BB73 /* ChatUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatUseCase.swift; sourceTree = "<group>"; };
 		F13B28FF2C32E7C000E0BB73 /* RestoChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestoChatViewController.swift; sourceTree = "<group>"; };
 		F13B29012C32E7D600E0BB73 /* RestoChatViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RestoChatViewController.storyboard; sourceTree = "<group>"; };
 		F13B29032C339C8300E0BB73 /* ChatViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ChatViewController.storyboard; sourceTree = "<group>"; };
+		F14AA2852CFEAC2E00FF3DCA /* LoginViewModel_UnitTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel_UnitTest.swift; sourceTree = "<group>"; };
 		F14F783C2C2FB933006018BE /* ChatsRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsRepositoryImpl.swift; sourceTree = "<group>"; };
 		F14F783E2C2FBA42006018BE /* Chats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chats.swift; sourceTree = "<group>"; };
 		F14F78402C306A08006018BE /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
@@ -314,6 +320,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E7BAFE2971D87D5BEC5F1B2 /* Pods_AlfaResto_Test.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -975,6 +982,7 @@
 			isa = PBXGroup;
 			children = (
 				43EC3BF3A890069FC54CB413 /* Pods_AlfaResto_RestoApp.framework */,
+				844A29A8A63EFF97A3CBA04E /* Pods_AlfaResto_Test.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -992,6 +1000,8 @@
 			children = (
 				B28D844DCC813719E4483F2A /* Pods-AlfaResto-RestoApp.debug.xcconfig */,
 				4CE26D7C96ECA761732C9C50 /* Pods-AlfaResto-RestoApp.release.xcconfig */,
+				9D0FDE541254C354B06D0A8E /* Pods-AlfaResto_Test.debug.xcconfig */,
+				E140E390CCC187618752576A /* Pods-AlfaResto_Test.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -1020,6 +1030,16 @@
 				F13B29012C32E7D600E0BB73 /* RestoChatViewController.storyboard */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		F14AA2842CFEAC0200FF3DCA /* Persentation */ = {
+			isa = PBXGroup;
+			children = (
+				F1C508462CEB3CB700C1C129 /* EditProfileVC_UnitTest.swift */,
+				F1C508482CEB41E200C1C129 /* EditProfileVC_UnitTest2.swift */,
+				F14AA2852CFEAC2E00FF3DCA /* LoginViewModel_UnitTest.swift */,
+			);
+			path = Persentation;
 			sourceTree = "<group>";
 		};
 		F14F78422C306A39006018BE /* MappersList */ = {
@@ -1179,20 +1199,11 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		F1C5084A2CEC392100C1C129 /* UITest */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = UITest;
-			sourceTree = "<group>";
-		};
 		F1CF44232CDC9EDC001040BA /* AlfaResto_Test */ = {
 			isa = PBXGroup;
 			children = (
-				F1C5084A2CEC392100C1C129 /* UITest */,
+				F14AA2842CFEAC0200FF3DCA /* Persentation */,
 				F1CF44242CDC9EDC001040BA /* AlfaResto_Test.swift */,
-				F1C508462CEB3CB700C1C129 /* EditProfileVC_UnitTest.swift */,
-				F1C508482CEB41E200C1C129 /* EditProfileVC_UnitTest2.swift */,
 			);
 			path = AlfaResto_Test;
 			sourceTree = "<group>";
@@ -1232,9 +1243,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F1CF44282CDC9EDC001040BA /* Build configuration list for PBXNativeTarget "AlfaResto_Test" */;
 			buildPhases = (
+				5DB52DE4727A44E9CF2C6090 /* [CP] Check Pods Manifest.lock */,
 				F1CF441E2CDC9EDC001040BA /* Sources */,
 				F1CF441F2CDC9EDC001040BA /* Frameworks */,
 				F1CF44202CDC9EDC001040BA /* Resources */,
+				3EBA7358C61B1EF1A53553DA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1340,6 +1353,45 @@
 			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-AlfaResto-RestoApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3EBA7358C61B1EF1A53553DA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AlfaResto_Test/Pods-AlfaResto_Test-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AlfaResto_Test/Pods-AlfaResto_Test-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AlfaResto_Test/Pods-AlfaResto_Test-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5DB52DE4727A44E9CF2C6090 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AlfaResto_Test-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1502,6 +1554,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F14AA2862CFEAC2E00FF3DCA /* LoginViewModel_UnitTest.swift in Sources */,
 				F1C508472CEB3CB700C1C129 /* EditProfileVC_UnitTest.swift in Sources */,
 				F1CF44252CDC9EDC001040BA /* AlfaResto_Test.swift in Sources */,
 				F1C508492CEB41E200C1C129 /* EditProfileVC_UnitTest2.swift in Sources */,
@@ -1724,11 +1777,13 @@
 		};
 		F1CF44292CDC9EDC001040BA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9D0FDE541254C354B06D0A8E /* Pods-AlfaResto_Test.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = M7R6QZ3L57;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				MARKETING_VERSION = 1.0;
@@ -1743,11 +1798,13 @@
 		};
 		F1CF442A2CDC9EDC001040BA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E140E390CCC187618752576A /* Pods-AlfaResto_Test.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = M7R6QZ3L57;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				MARKETING_VERSION = 1.0;

@@ -20,5 +20,10 @@ target 'AlfaResto-RestoApp' do
   pod 'Alamofire', '5.7.1'
   pod 'FirebaseDatabase'
   pod 'MessageKit'
+  
+  target 'AlfaResto_Test' do
+      inherit! :search_paths
+      pod 'RxSwift'
+    end
 
 end
