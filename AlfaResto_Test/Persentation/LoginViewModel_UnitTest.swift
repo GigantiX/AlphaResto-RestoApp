@@ -136,7 +136,6 @@ final class LoginViewModel_UnitTest: XCTestCase {
 class RestoUseCaseMock: RestoUseCase {
     
     //dummy UseCase for testing, only few func used
-    //Unit Test
     func executeLogout() -> RxSwift.Completable {
         return RxSwift.Completable.empty()
     }
