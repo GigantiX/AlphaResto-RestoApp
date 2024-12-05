@@ -18,7 +18,6 @@ final class AlfaResto_Test: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
     
-    //Unit Test
     func test_ProfileViewController_add_ShouldReturnValue() {
         let vc = ProfileViewController()
         let x = 10
