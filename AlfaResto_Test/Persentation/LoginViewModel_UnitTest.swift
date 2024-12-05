@@ -134,6 +134,8 @@ final class LoginViewModel_UnitTest: XCTestCase {
 }
 
 class RestoUseCaseMock: RestoUseCase {
+    
+    //dummy UseCase for testing, only few used
     func executeLogout() -> RxSwift.Completable {
         return RxSwift.Completable.empty()
     }
@@ -157,7 +159,6 @@ class RestoUseCaseMock: RestoUseCase {
     func executeFetchCustomerCount() -> RxSwift.Observable<Int?> {
         return RxSwift.Observable<Int?>.empty()
     }
-    
     
     var loginResult: Observable<String>!
     
