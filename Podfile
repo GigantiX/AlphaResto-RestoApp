@@ -1,11 +1,8 @@
- # Uncomment the next line to define a global platform for your project
-#  source 'https://github.com/CocoaPods/Specs.git'
-  platform :ios, '17.0'
+platform :ios, '17.0'
 
 target 'AlfaResto-RestoApp' do
-  # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
-
+  
   pod 'FirebaseAnalytics'
   pod 'FirebaseMessaging'
   pod 'FirebaseCrashlytics'
@@ -22,8 +19,8 @@ target 'AlfaResto-RestoApp' do
   pod 'MessageKit'
   
   target 'AlfaResto_Test' do
-      inherit! :search_paths
-      pod 'RxSwift'
-    end
-
+    inherit! :search_paths
+    pod 'RxSwift'
+  end
+  
 end
