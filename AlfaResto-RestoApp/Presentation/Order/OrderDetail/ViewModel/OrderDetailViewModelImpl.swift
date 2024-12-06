@@ -18,6 +18,7 @@ enum OrderDetailResult {
 protocol OrderDetailViewModelInput {
     func getOrderDetail(orderID: String)
     func getAllOrderItemFrom(orderID: String)
+    func setToReadChat(orderID: String)
     func manageShipment(orderID: String, status: String)
     func getShipmentDetailWith(orderID: String)
     func postNotification(tokenNotification: String, title: String, body: String, link: String?)
@@ -34,6 +35,7 @@ protocol OrderDetailViewModelInput {
     func checkIsAlreadyNotifyWhen50m()
     func updateIsAlreadyNotifyWhen50m()
     func getUserToken(userID: String)
+    func updateTotalAmount(amount: Int)
 }
 
 protocol OrderDetailViewModelOutput { 
@@ -50,6 +52,7 @@ protocol OrderDetailViewModelOutput {
     var isUpdateStatusButtonEnable: Bool? { get set }
     var getOrderDetailObservable: PublishSubject<OrderDetailResult> { get }
     var getListItemObservable: PublishSubject<OrderDetailResult> { get }
+    var chatStatusObservable: PublishSubject<OrderDetailResult> { get }
     var manageShipmentObservable: PublishSubject<OrderDetailResult> { get }
     var getShipmentDetailObservable: PublishSubject<OrderDetailResult> { get }
     var postNotificationObservable: PublishSubject<OrderDetailResult> { get }
@@ -59,6 +62,7 @@ protocol OrderDetailViewModelOutput {
     var updateIsAlreadyNotifyWhen50mObservable: PublishSubject<OrderDetailResult> { get }
     var getRestoCoordinateObservable: PublishSubject<OrderDetailResult> { get }
     var getDirectionMapsObservable: PublishSubject<OrderDetailResult> { get }
+    var updateTotalRevenueObservable: PublishSubject<OrderDetailResult> { get }
     var disposeBag: DisposeBag { get }
 }
 
@@ -85,6 +89,7 @@ final class OrderDetailViewModelImpl: OrderDetailViewModel {
     var isUpdateStatusButtonEnable: Bool?
     var getOrderDetailObservable = PublishSubject<OrderDetailResult>()
     var getListItemObservable = PublishSubject<OrderDetailResult>()
+    var chatStatusObservable = PublishSubject<OrderDetailResult>()
     var manageShipmentObservable = PublishSubject<OrderDetailResult>()
     var getShipmentDetailObservable = PublishSubject<OrderDetailResult>()
     var postNotificationObservable = PublishSubject<OrderDetailResult>()
@@ -93,6 +98,7 @@ final class OrderDetailViewModelImpl: OrderDetailViewModel {
     var checkIsAlreadyNotifyWhen50mObservable = PublishSubject<OrderDetailResult>()
     var updateIsAlreadyNotifyWhen50mObservable = PublishSubject<OrderDetailResult>()
     var getRestoCoordinateObservable = PublishSubject<OrderDetailResult>()
+    var updateTotalRevenueObservable = PublishSubject<OrderDetailResult>()
     var getDirectionMapsObservable = PublishSubject<OrderDetailResult>()
     var disposeBag = DisposeBag()
     var coordinate: CLLocationCoordinate2D?
@@ -138,6 +144,32 @@ extension OrderDetailViewModelImpl {
                     self.getListItemObservable.onNext(.success)
                 case .error(let error):
                     self.getListItemObservable.onNext(.failure(error))
+                default:
+                    break
+                }
+            }.disposed(by: self.disposeBag)
+    }
+    
+    func setToReadChat(orderID: String) {
+        orderUseCase.executeUpdateChatStatus(orderID: orderID).subscribe { [weak self] event in
+            guard let self else { return }
+            switch event {
+            case .completed:
+                self.chatStatusObservable.onNext(.success)
+            case .error(let error):
+                debugPrint(error)
+                self.chatStatusObservable.onNext(.failure(error))
+            }
+        }.disposed(by: disposeBag)
+    }
+    
+    func updateTotalAmount(amount: Int) {
+        orderUseCase.executeUpdateTotalRevenue(restoID: UserDefaultManager.restoID ?? "", amount: amount)
+            .subscribe { [weak self] event in
+                guard let self else { return }
+                switch event {
+                case .completed:
+                    self.updateTotalRevenueObservable.onNext(.success)
                 default:
                     break
                 }
@@ -273,11 +305,13 @@ extension OrderDetailViewModelImpl {
             .subscribe { [weak self] event in
                 guard let self else { return }
                 switch event {
-                case .success(let resto):
+                case .next(let resto):
                     self.restaurant = resto
                     self.getRestoCoordinateObservable.onNext(.success)
-                case .failure(let error):
+                case .error(let error):
                     self.getRestoCoordinateObservable.onNext(.failure(error))
+                default:
+                    break
                 }
             }
             .disposed(by: self.disposeBag)

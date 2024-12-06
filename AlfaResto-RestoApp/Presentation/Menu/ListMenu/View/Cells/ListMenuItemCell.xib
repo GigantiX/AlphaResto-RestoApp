@@ -17,7 +17,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="348" height="120"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AlfaRestoLogo" translatesAutoresizingMaskIntoConstraints="NO" id="U1S-ZG-9r9">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AlphaRestoLogo" translatesAutoresizingMaskIntoConstraints="NO" id="U1S-ZG-9r9">
                         <rect key="frame" x="14" y="13" width="106" height="94"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="106" id="66j-dU-qq1"/>
@@ -97,7 +97,7 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="AlfaRestoLogo" width="106" height="29"/>
+        <image name="AlphaRestoLogo" width="129" height="29"/>
         <image name="square.and.pencil" catalog="system" width="128" height="121"/>
         <namedColor name="MainColor">
             <color red="0.98431372549019602" green="0.35686274509803922" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

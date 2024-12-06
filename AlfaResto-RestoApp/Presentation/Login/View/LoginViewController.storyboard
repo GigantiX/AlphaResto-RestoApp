@@ -16,8 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AlfaRestoLogo" translatesAutoresizingMaskIntoConstraints="NO" id="ssh-Bx-LYt">
-                                <rect key="frame" x="21" y="67" width="106" height="29"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AlphaRestoLogo" translatesAutoresizingMaskIntoConstraints="NO" id="ssh-Bx-LYt">
+                                <rect key="frame" x="21" y="67" width="129" height="29"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LoginImage" translatesAutoresizingMaskIntoConstraints="NO" id="n3U-UF-wpt">
                                 <rect key="frame" x="91.666666666666686" y="145" width="210" height="198"/>
@@ -161,7 +161,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="AlfaRestoLogo" width="106" height="29"/>
+        <image name="AlphaRestoLogo" width="129" height="29"/>
         <image name="LoginImage" width="210" height="198"/>
         <image name="eye" catalog="system" width="128" height="79"/>
         <namedColor name="DangerColor">

@@ -11,7 +11,7 @@ final class Constant {
     // Image
     static let showPasswordEnableImage = UIImage(systemName: "eye")
     static let showPasswordDisableImage = UIImage(systemName: "eye.slash")
-    static let alfaRestoLogoImage = UIImage(named: "AlfaRestoLogo")
+    static let alfaRestoLogoImage = UIImage(named: "AlphaRestoLogo")
     static let loading = "LoadingAnimation"
     
     // Error Message
@@ -40,6 +40,7 @@ final class Constant {
     static let googleAPIKey = "GoogleAPIKey"
     static let shipments = "shipments"
     static let chats = "chats"
+    static let DELIVERED = "Delivered"
     
     static let defaultMenuDescription = "(Optional) Enter Description..."
     static let notifBaseAPIUrl = "NotifBaseAPIUrl"

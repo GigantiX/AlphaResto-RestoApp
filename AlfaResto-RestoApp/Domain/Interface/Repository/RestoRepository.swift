@@ -11,8 +11,9 @@ import RxSwift
 protocol RestoRepository {
     func login(email: String, password: String) -> Observable<String>
     func logout() -> Completable
-    func fetchProfile(restoID: String) -> Single<ProfileStoreModel>
+    func fetchProfile(restoID: String) -> Observable<ProfileStoreModel>
     func updateProfile(close: String, is24h: Bool, open: String, address: String, desc: String, image: UIImage, telp: String) -> Completable
     func updateToken(restoID: String, token: String) -> Completable
     func updateTemporaryClose(restoID: String, isClose: Bool) -> Completable
+    func fetchCustomerCount() -> Observable<Int?>
 }

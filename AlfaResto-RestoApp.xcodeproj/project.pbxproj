@@ -60,8 +60,10 @@
 		3F7E75BA2C2CFDD400E325A8 /* NotificationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7E75B92C2CFDD400E325A8 /* NotificationHandler.swift */; };
 		3F7E75BE2C2D02F300E325A8 /* Date+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7E75BD2C2D02F300E325A8 /* Date+extensions.swift */; };
 		3F7E75C02C2D22F500E325A8 /* Encodable+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7E75BF2C2D22F500E325A8 /* Encodable+extensions.swift */; };
-		3F7E75C42C2D40D500E325A8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3F7E75C32C2D40D500E325A8 /* GoogleService-Info.plist */; };
 		3F8422422C462C5F00294CA9 /* QuerySnapshot+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8422412C462C5F00294CA9 /* QuerySnapshot+extensions.swift */; };
+		3F8422452C4A520500294CA9 /* GrayProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8422442C4A520500294CA9 /* GrayProfileView.swift */; };
+		3F8422472C4A522800294CA9 /* GrayProfileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F8422462C4A522800294CA9 /* GrayProfileView.xib */; };
+		3F8422492C4A53A700294CA9 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8422482C4A53A700294CA9 /* UIView+Ext.swift */; };
 		3F8E39292C2958F20019FFFE /* String+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8E39282C2958F20019FFFE /* String+extensions.swift */; };
 		3FA2A5752C328F7A00F0A22D /* MapHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA2A5742C328F7A00F0A22D /* MapHandler.swift */; };
 		3FA2A57C2C33D06600F0A22D /* ProfileStoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA2A57B2C33D06600F0A22D /* ProfileStoreModel.swift */; };
@@ -135,6 +137,7 @@
 		F1AF805A2C1C426200CED6AF /* EditProfileViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1AF80592C1C426200CED6AF /* EditProfileViewController.storyboard */; };
 		F1AF805C2C1C427200CED6AF /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AF805B2C1C427200CED6AF /* EditProfileViewController.swift */; };
 		F1AF805E2C1C428300CED6AF /* EditProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AF805D2C1C428300CED6AF /* EditProfileViewModel.swift */; };
+		F1D9A59C2C4A1C600008AA37 /* BadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D9A59B2C4A1C600008AA37 /* BadgeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -192,8 +195,10 @@
 		3F7E75B92C2CFDD400E325A8 /* NotificationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationHandler.swift; sourceTree = "<group>"; };
 		3F7E75BD2C2D02F300E325A8 /* Date+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+extensions.swift"; sourceTree = "<group>"; };
 		3F7E75BF2C2D22F500E325A8 /* Encodable+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+extensions.swift"; sourceTree = "<group>"; };
-		3F7E75C32C2D40D500E325A8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3F8422412C462C5F00294CA9 /* QuerySnapshot+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QuerySnapshot+extensions.swift"; sourceTree = "<group>"; };
+		3F8422442C4A520500294CA9 /* GrayProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrayProfileView.swift; sourceTree = "<group>"; };
+		3F8422462C4A522800294CA9 /* GrayProfileView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GrayProfileView.xib; sourceTree = "<group>"; };
+		3F8422482C4A53A700294CA9 /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
 		3F8E39282C2958F20019FFFE /* String+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+extensions.swift"; sourceTree = "<group>"; };
 		3FA2A5742C328F7A00F0A22D /* MapHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapHandler.swift; sourceTree = "<group>"; };
 		3FA2A57B2C33D06600F0A22D /* ProfileStoreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileStoreModel.swift; sourceTree = "<group>"; };
@@ -273,6 +278,7 @@
 		F1AF80592C1C426200CED6AF /* EditProfileViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditProfileViewController.storyboard; sourceTree = "<group>"; };
 		F1AF805B2C1C427200CED6AF /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		F1AF805D2C1C428300CED6AF /* EditProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewModel.swift; sourceTree = "<group>"; };
+		F1D9A59B2C4A1C600008AA37 /* BadgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -527,6 +533,15 @@
 			path = Handler;
 			sourceTree = "<group>";
 		};
+		3F8422432C4A51DB00294CA9 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				3F8422442C4A520500294CA9 /* GrayProfileView.swift */,
+				3F8422462C4A522800294CA9 /* GrayProfileView.xib */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
 		3FA2A5782C33CF8700F0A22D /* ListOrder */ = {
 			isa = PBXGroup;
 			children = (
@@ -663,7 +678,6 @@
 		3FD1F6D82C19811E0022ACE5 /* Files */ = {
 			isa = PBXGroup;
 			children = (
-				3F7E75C32C2D40D500E325A8 /* GoogleService-Info.plist */,
 				3FD1F6BE2C1831690022ACE5 /* SceneDelegate.swift */,
 			);
 			name = Files;
@@ -808,6 +822,7 @@
 				3F7E75BF2C2D22F500E325A8 /* Encodable+extensions.swift */,
 				3FA2A57D2C34EB5000F0A22D /* Int+extensions.swift */,
 				3F8422412C462C5F00294CA9 /* QuerySnapshot+extensions.swift */,
+				3F8422482C4A53A700294CA9 /* UIView+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1032,6 +1047,8 @@
 		F15620292C3445FB00B73B94 /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				F1D9A59A2C4A1C4A0008AA37 /* Badge */,
+				3F8422432C4A51DB00294CA9 /* CustomView */,
 				F156202C2C34479100B73B94 /* Loading */,
 			);
 			path = Component;
@@ -1133,6 +1150,14 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		F1D9A59A2C4A1C4A0008AA37 /* Badge */ = {
+			isa = PBXGroup;
+			children = (
+				F1D9A59B2C4A1C600008AA37 /* BadgeView.swift */,
+			);
+			path = Badge;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1206,7 +1231,7 @@
 				3FD1F7222C2000C80022ACE5 /* ListMenuViewController.storyboard in Resources */,
 				3FD1F7172C1C40E40022ACE5 /* TabBarController.storyboard in Resources */,
 				3F70CB122C2272ED004C0309 /* EditMenuViewController.storyboard in Resources */,
-				3F7E75C42C2D40D500E325A8 /* GoogleService-Info.plist in Resources */,
+				3F8422472C4A522800294CA9 /* GrayProfileView.xib in Resources */,
 				F14F78542C324DBD006018BE /* OrderTableViewCell.xib in Resources */,
 				3FD1F6F12C1AFD800022ACE5 /* LoginViewController.storyboard in Resources */,
 				F1AF805A2C1C426200CED6AF /* EditProfileViewController.storyboard in Resources */,
@@ -1241,6 +1266,40 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		621D3143C6D8BA5EDEDB0A2B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AlfaResto-RestoApp/Pods-AlfaResto-RestoApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AlfaResto-RestoApp/Pods-AlfaResto-RestoApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AlfaResto-RestoApp/Pods-AlfaResto-RestoApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DCFBE1E2A7CAFC830BDE8400 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AlfaResto-RestoApp/Pods-AlfaResto-RestoApp-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AlfaResto-RestoApp/Pods-AlfaResto-RestoApp-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AlfaResto-RestoApp/Pods-AlfaResto-RestoApp-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		621D3143C6D8BA5EDEDB0A2B /* [CP] Embed Pods Frameworks */ = {
@@ -1313,6 +1372,7 @@
 				3F7E75BA2C2CFDD400E325A8 /* NotificationHandler.swift in Sources */,
 				F13B29002C32E7C000E0BB73 /* RestoChatViewController.swift in Sources */,
 				3F7E75B52C2C1E1600E325A8 /* FirebaseDatabaseReferences.swift in Sources */,
+				3F8422452C4A520500294CA9 /* GrayProfileView.swift in Sources */,
 				3FA2A5B32C3D165500F0A22D /* DeepLink.swift in Sources */,
 				3F7E75B22C2C1D2400E325A8 /* FirebaseDatabaseDB.swift in Sources */,
 				3F70CB242C252C15004C0309 /* OrderDetailViewModelImpl.swift in Sources */,
@@ -1320,6 +1380,7 @@
 				3FD1F6BD2C1831690022ACE5 /* AppDelegate.swift in Sources */,
 				3FD1F6F42C1BEF8D0022ACE5 /* RestoRepository.swift in Sources */,
 				F14F783F2C2FBA42006018BE /* Chats.swift in Sources */,
+				F1D9A59C2C4A1C600008AA37 /* BadgeView.swift in Sources */,
 				F12BFBF92C22BB5E00738716 /* Alert.swift in Sources */,
 				3FD1F7302C2010790022ACE5 /* FirestoreDB.swift in Sources */,
 				F15903A42C2872AB00150A94 /* OrderViewModel.swift in Sources */,
@@ -1332,6 +1393,7 @@
 				F15620382C352CE400B73B94 /* AccessNetwork.swift in Sources */,
 				3F70CB2E2C2555DA004C0309 /* OrderDetailTableViewController.swift in Sources */,
 				3FD1F6F62C1BEFF50022ACE5 /* RestoUseCase.swift in Sources */,
+				3F8422492C4A53A700294CA9 /* UIView+Ext.swift in Sources */,
 				F14F78572C324DF9006018BE /* MessageMappers.swift in Sources */,
 				F14F78412C306A08006018BE /* Message.swift in Sources */,
 				3F7E75812C2BD00700E325A8 /* DataTransferServices.swift in Sources */,
@@ -1535,7 +1597,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = M7R6QZ3L57;
+				DEVELOPMENT_TEAM = UKUGHUS3M8;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "AlfaResto-RestoApp/Resources/Info.plist";
@@ -1571,7 +1633,7 @@
 				CODE_SIGN_ENTITLEMENTS = "AlfaResto-RestoApp/AlfaResto-RestoApp.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = M7R6QZ3L57;
+				DEVELOPMENT_TEAM = UKUGHUS3M8;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "AlfaResto-RestoApp/Resources/Info.plist";

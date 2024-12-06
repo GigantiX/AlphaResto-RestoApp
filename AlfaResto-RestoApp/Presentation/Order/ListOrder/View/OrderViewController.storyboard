@@ -19,7 +19,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AlfaRestoLogo" translatesAutoresizingMaskIntoConstraints="NO" id="oqv-ae-5EA">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AlphaRestoLogo" translatesAutoresizingMaskIntoConstraints="NO" id="oqv-ae-5EA">
                                 <rect key="frame" x="20" y="59" width="106" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="29" id="GTP-xs-H6e"/>
@@ -90,7 +90,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="AlfaRestoLogo" width="106" height="29"/>
+        <image name="AlphaRestoLogo" width="129" height="29"/>
         <image name="line.3.horizontal.decrease.circle.fill" catalog="system" width="128" height="123"/>
         <namedColor name="MainColor">
             <color red="0.98431372549019602" green="0.35686274509803922" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

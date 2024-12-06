@@ -21,6 +21,7 @@ struct ProfileStoreModel: Codable {
     let phoneNumber: String
     let latitude: CGFloat?
     let longitude: CGFloat?
+    let totalRevenue: Int?
     
     enum CodingKeys: String, CodingKey {
         case token, latitude, longitude
@@ -34,6 +35,7 @@ struct ProfileStoreModel: Codable {
         case id = "resto_id"
         case image = "resto_image"
         case phoneNumber = "resto_no_telp"
+        case totalRevenue = "total_revenue"
     }
 }
 
@@ -53,6 +55,7 @@ extension ProfileStoreModel {
         self.latitude = try container.decodeIfPresent(CGFloat.self, forKey: .latitude)
         self.longitude = try container.decodeIfPresent(CGFloat.self, forKey: .longitude)
         self.isTemporaryClose = try container.decodeIfPresent(Bool.self, forKey: .isTemporaryClose)
+        self.totalRevenue = try container.decodeIfPresent(Int.self, forKey: .totalRevenue)
     }
     
     func encode(to encoder: any Encoder) throws {
@@ -70,5 +73,6 @@ extension ProfileStoreModel {
         try container.encodeIfPresent(self.latitude, forKey: .latitude)
         try container.encodeIfPresent(self.longitude, forKey: .longitude)
         try container.encodeIfPresent(self.isTemporaryClose, forKey: .isTemporaryClose)
+        try container.encodeIfPresent(self.totalRevenue, forKey: .totalRevenue)
     }
 }

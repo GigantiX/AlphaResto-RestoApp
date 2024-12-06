@@ -18,6 +18,7 @@ struct Order: Codable {
     let notes: String?
     let latitude: CLLocationDegrees?
     let longitude: CLLocationDegrees?
+    let readStatus: Bool?
     var orderItems: [OrderItem] = []
     
     enum CodingKeys: String, CodingKey {
@@ -28,11 +29,12 @@ struct Order: Codable {
         case address = "full_address"
         case orderDate = "order_date"
         case totalPrice = "total_price"
+        case readStatus = "read_status"
     }
 }
 
 extension Order {
-    init(id: String, userID: String? = nil, userName: String? = nil, address: String? = nil, orderDate: Date? = nil, totalPrice: Int? = nil, latitude: CLLocationDegrees? = nil, longitude: CLLocationDegrees? = nil, orderItems: [OrderItem] = [], notes: String? = nil) {
+    init(id: String, userID: String? = nil, userName: String? = nil, address: String? = nil, orderDate: Date? = nil, totalPrice: Int? = nil, latitude: CLLocationDegrees? = nil, longitude: CLLocationDegrees? = nil, readStatus: Bool? = nil, orderItems: [OrderItem] = [], notes: String? = nil) {
         self.id = id
         self.userID = userID
         self.userName = userName
@@ -41,6 +43,7 @@ extension Order {
         self.totalPrice = totalPrice
         self.latitude = latitude
         self.longitude = longitude
+        self.readStatus = readStatus
         self.orderItems = orderItems
         self.notes = notes
     }
@@ -56,6 +59,7 @@ extension Order {
         self.address = try container.decodeIfPresent(String.self, forKey: .address)
         self.orderDate = try container.decodeIfPresent(Date.self, forKey: .orderDate)
         self.totalPrice = try container.decodeIfPresent(Int.self, forKey: .totalPrice)
+        self.readStatus = try container.decodeIfPresent(Bool.self, forKey: .readStatus)
     }
     
     func encode(to encoder: any Encoder) throws {
@@ -69,6 +73,7 @@ extension Order {
         try container.encodeIfPresent(self.address, forKey: .address)
         try container.encodeIfPresent(self.orderDate, forKey: .orderDate)
         try container.encodeIfPresent(self.totalPrice, forKey: .totalPrice)
+        try container.encodeIfPresent(self.readStatus, forKey: .readStatus)
     }
 }
 

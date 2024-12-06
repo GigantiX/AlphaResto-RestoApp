@@ -73,15 +73,33 @@ extension RestoRepositoryImpl: RestoRepository {
         }
     }
     
-    func fetchProfile(restoID: String) -> RxSwift.Single<ProfileStoreModel> {
-        return Single.create { single in
-            let firestoreReferences = FirestoreReferences.getRestoDocumentReferences(restoID: restoID)
-            firestoreReferences.getDocument(as: ProfileStoreModel.self) { result in
-                switch result {
-                case .success(let profile):
-                    single(.success(profile))
-                case .failure(let error):
-                    single(.failure(error))
+    func fetchCustomerCount() -> Observable<Int?> {
+        return Observable.create { observer in
+            
+            _ = FirestoreReferences.getUserCollectionReferences()
+                .addSnapshotListener { querySnapshot, error in
+                    if let error {
+                        observer.onError(AppError.errorFetchData)
+                        return
+                    }
+                    
+                    if let querySnapshot {
+                        observer.onNext(querySnapshot.count)
+                    }
+                }
+            
+            return Disposables.create()
+        }
+    }
+    
+    func fetchProfile(restoID: String) -> RxSwift.Observable<ProfileStoreModel> {
+        return Observable.create { observer in
+            Task {
+                do {
+                    let restoDocument = try await FirestoreReferences.getRestoDocumentReferences(restoID: restoID).getDocument(as: ProfileStoreModel.self)
+                    observer.onNext(restoDocument)
+                } catch {
+                    observer.onError(AppError.errorFetchData)
                 }
             }
             return Disposables.create()
@@ -123,8 +141,8 @@ extension RestoRepositoryImpl: RestoRepository {
     func logout() -> RxSwift.Completable {
         authenticationServices.logout()
     }
-    
 }
+
 
 private extension RestoRepositoryImpl {
     func uploadImage(image: UIImage, name: String) -> RxSwift.Single<String> {

@@ -11,10 +11,11 @@ import RxSwift
 protocol RestoUseCase {
     func executeLogin(email: String, password: String) -> Observable<String>
     func executeLogout() -> Completable
-    func executeFetchProfile(restoID: String) -> Single<ProfileStoreModel>
+    func executeFetchProfile(restoID: String) -> Observable<ProfileStoreModel>
     func executeUpdateProfile(close: String, is24h: Bool, open: String, address: String, desc: String, image: UIImage, telp: String) -> Completable
     func executeUpdateToken(restoID: String, token: String) -> Completable
     func executeUpdateTemporaryClose(restoID: String, isClose: Bool) -> Completable
+    func executeFetchCustomerCount() -> Observable<Int?>
 }
 
 final class RestoUseCaseImpl {
@@ -32,7 +33,7 @@ extension RestoUseCaseImpl: RestoUseCase {
         restoRepository.updateProfile(close: close, is24h: is24h, open: open, address: address, desc: desc, image: image, telp: telp)
     }
     
-    func executeFetchProfile(restoID: String) -> RxSwift.Single<ProfileStoreModel> {
+    func executeFetchProfile(restoID: String) -> RxSwift.Observable<ProfileStoreModel> {
         restoRepository.fetchProfile(restoID: restoID)
     }
     
@@ -50,5 +51,9 @@ extension RestoUseCaseImpl: RestoUseCase {
     
     func executeUpdateTemporaryClose(restoID: String, isClose: Bool) -> Completable {
         restoRepository.updateTemporaryClose(restoID: restoID, isClose: isClose)
+    }
+    
+    func executeFetchCustomerCount() -> Observable<Int?> {
+        restoRepository.fetchCustomerCount()
     }
 }

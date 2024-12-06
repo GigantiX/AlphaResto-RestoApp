@@ -84,6 +84,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="buttonChat" destination="aM3-Ya-srE" id="29u-NZ-jK2"/>
                         <outlet property="customerNameLabel" destination="PXM-JZ-n2K" id="arE-5u-ulC"/>
                     </connections>
                 </viewController>

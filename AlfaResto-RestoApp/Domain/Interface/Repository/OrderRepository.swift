@@ -15,4 +15,6 @@ protocol OrderRepository {
     func fetchAllOngoingOrder(isDescending: Bool) -> Single<[Order]>
     func getOnGoingOrderCount() -> Observable<Int?>
     func getUserToken(userID: String) -> Observable<String?>
+    func updateChatStatus(orderID: String) -> Completable
+    func updateTotalRevenue(restoID: String, amount: Int) -> Completable
 }

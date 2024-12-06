@@ -12,6 +12,7 @@ import RxSwift
 final class OrderDetailViewController: UIViewController {
     
     @IBOutlet private weak var customerNameLabel: UILabel!
+    @IBOutlet weak var buttonChat: UIButton!
     
     private let dependency = RestoAppDIContainer()
     private let disposeBag = DisposeBag()
@@ -21,6 +22,13 @@ final class OrderDetailViewController: UIViewController {
     private var orderDetailTableVC: OrderDetailTableViewController?
     private var lastLocation: CLLocation?
     
+    private lazy var badgeView: BadgeView = {
+        var badge = BadgeView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
+        badge.text = "N"
+        badge.badgeColor = .red
+        badge.textColor = .white
+        return badge
+    }()
     private lazy var orderDetailVM: OrderDetailViewModel = dependency.makeOrderDetailViewModel()
     
     var order: Order?
@@ -88,6 +96,8 @@ private extension OrderDetailViewController {
         self.swipe(.right)
         orderDetailVM.setLocationDelegate(self)
         setupObserver()
+        setupBadge()
+        
     }
     
     func setupLoadingView() {
@@ -101,6 +111,23 @@ private extension OrderDetailViewController {
         ])
     }
     
+    func setupBadge() {
+        buttonChat.addSubview(badgeView)
+        badgeView.translatesAutoresizingMaskIntoConstraints = false
+        badgeView.isHidden = true
+        
+        NSLayoutConstraint.activate([
+            badgeView.trailingAnchor.constraint(equalTo: buttonChat.trailingAnchor, constant: 5),
+            badgeView.topAnchor.constraint(equalTo: buttonChat.topAnchor, constant: -5),
+            badgeView.widthAnchor.constraint(greaterThanOrEqualToConstant: 20),
+            badgeView.heightAnchor.constraint(equalToConstant: 20)
+        ])
+    }
+    
+    func setStatusChat() {
+        guard let order = orderDetailVM.order else { return }
+        badgeView.isHidden = order.readStatus ?? true
+    }
     
     func setupObserver() {
         orderDetailVM.getOrderDetailObservable
@@ -115,6 +142,7 @@ private extension OrderDetailViewController {
                         }
                         self.orderDetailTableVC?.reload()
                         self.customerNameLabel.text = self.orderDetailVM.order?.userName ?? "No Name"
+                        setStatusChat()
                     }
                 default:
                     break
@@ -164,6 +192,7 @@ private extension OrderDetailViewController {
                 }
             }
             .disposed(by: self.disposeBag)
+        
         orderDetailVM.manageShipmentObservable.subscribe {
             [weak self] event in
             guard let self else { return }
@@ -172,6 +201,22 @@ private extension OrderDetailViewController {
             case .next(_):
                 DispatchQueue.main.async {
                     self.orderDetailTableVC?.reload()
+                }
+            case .error(let error):
+                debugPrint(error)
+            default:
+                break
+            }
+        }.disposed(by: self.disposeBag)
+        
+        orderDetailVM.chatStatusObservable.subscribe {
+            [weak self] event in
+            guard let self else { return }
+            
+            switch event {
+            case .next(_):
+                DispatchQueue.main.async {
+                    self.badgeView.isHidden = true
                 }
             case .error(let error):
                 debugPrint(error)
@@ -272,6 +317,8 @@ private extension OrderDetailViewController {
     }
     
     func goToChatPage() {
+        orderDetailVM.setToReadChat(orderID: orderDetailVM.order?.id ?? "")
+        
         let storyboard = UIStoryboard(name: RestoChatViewController.storyboardID, bundle: nil)
         guard let vc = storyboard.instantiateViewController(withIdentifier: RestoChatViewController.storyboardID) as? RestoChatViewController else { return }
         

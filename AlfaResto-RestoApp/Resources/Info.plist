@@ -16,7 +16,7 @@
 		</dict>
 	</array>
 	<key>GoogleAPIKey</key>
-	<string>AIzaSyDgi6aV9k0sLJkTsXlbaUBRD2k_jUm6zpo</string>
+	<string>your-google-api-key</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>comgooglemaps-x-callback</string>

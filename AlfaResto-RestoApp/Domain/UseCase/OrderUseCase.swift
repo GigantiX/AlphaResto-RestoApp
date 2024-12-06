@@ -15,6 +15,8 @@ protocol OrderUseCase {
     func executeFetchHistoryOrder(isDescending: Bool) -> Single<[Order]>
     func executeGetOnGoingOrderCount() -> Observable<Int?>
     func executeGetUserToken(userID: String) -> Observable<String?> 
+    func executeUpdateChatStatus(orderID: String) -> Completable
+    func executeUpdateTotalRevenue(restoID: String, amount: Int) -> Completable
 }
 
 final class OrderUseCaseImpl {
@@ -28,6 +30,10 @@ final class OrderUseCaseImpl {
 }
 
 extension OrderUseCaseImpl: OrderUseCase {
+    func executeUpdateChatStatus(orderID: String) -> RxSwift.Completable {
+        orderRepository.updateChatStatus(orderID: orderID)
+    }
+    
     func executeGetOnGoingOrderCount() -> RxSwift.Observable<Int?> {
         orderRepository.getOnGoingOrderCount()
     }
@@ -50,5 +56,9 @@ extension OrderUseCaseImpl: OrderUseCase {
     
     func executeGetUserToken(userID: String) -> Observable<String?> {
         orderRepository.getUserToken(userID: userID)
+    }
+    
+    func executeUpdateTotalRevenue(restoID: String, amount: Int) -> Completable {
+        orderRepository.updateTotalRevenue(restoID: restoID, amount: amount)
     }
 }

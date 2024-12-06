@@ -85,6 +85,27 @@ extension OrderRepositoryImpl: OrderRepository {
         }
     }
     
+    func updateTotalRevenue(restoID: String, amount: Int) -> Completable {
+        return Completable.create { completable in
+            
+            let firestoreRestoReferences = FirestoreReferences.getRestoDocumentReferences(restoID: restoID)
+            
+            Task {
+                do {
+                    let resto = try await firestoreRestoReferences.getDocument(as: ProfileStoreModel.self)
+                    let updatedData: [String: Any] = [
+                        ProfileStoreModel.CodingKeys.totalRevenue.rawValue: (resto.totalRevenue ?? 0) + amount
+                    ]
+                    try await firestoreRestoReferences.updateData(updatedData)
+                    completable(.completed)
+                } catch {
+                    completable(.error(AppError.errorFetchData))
+                }
+            }
+            return Disposables.create()
+        }
+    }
+    
     func fetchAllOngoingOrder(isDescending: Bool) -> Single<[Order]> {
         fetchAllOrder(isDescending: isDescending, type: .onGoing)
     }
@@ -107,6 +128,21 @@ extension OrderRepositoryImpl: OrderRepository {
                         observer.onNext(snapshot.documents.count)
                     }
                 }
+            return Disposables.create()
+        }
+    }
+    
+    func updateChatStatus(orderID: String) -> Completable {
+        return Completable.create { complete in
+            let references = FirestoreReferences.getOrderDocumentReferences(orderID: orderID)
+            
+            references.updateData(["read_status": true]) { error in
+                if let error {
+                    complete(.error(error))
+                } else {
+                    complete(.completed)
+                }
+            }
             return Disposables.create()
         }
     }

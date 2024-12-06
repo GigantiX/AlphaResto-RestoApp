@@ -11,13 +11,15 @@ import Network
 
 class ProfileViewController: UIViewController {
     
+    @IBOutlet weak var buttonSettings: UIButton!
     @IBOutlet weak var isTemproraryCloseSegmented: UISegmentedControl!
     @IBOutlet weak var labelAddress: UILabel!
     @IBOutlet weak var labelOpenHours: UILabel!
     @IBOutlet weak var labelPhoneNumber: UILabel!
     @IBOutlet weak var labelDescription: UILabel!
     @IBOutlet weak var imageStore: UIImageView!
-    @IBOutlet weak var buttonSettings: UIButton!
+    @IBOutlet private weak var grossProfitView: GrayProfileView!
+    @IBOutlet private weak var totalCustomerView: GrayProfileView!
     
     private let depedency = RestoAppDIContainer()
     private let disposeBag = DisposeBag()
@@ -40,14 +42,6 @@ class ProfileViewController: UIViewController {
         viewModel?.fetchProfile()
     }
     
-    @IBAction func onTapEditProfile(_ sender: Any) {
-        moveToEditProfile()
-    }
-    
-    @IBAction func onTapLogout(_ sender: Any) {
-        setupLogout()
-    }
-    
     @IBAction func didSegmentedPressed(_ sender: UISegmentedControl) {
         updateTemporaryClose()
     }
@@ -56,10 +50,11 @@ class ProfileViewController: UIViewController {
 private extension ProfileViewController {
     
     func setup() {
-        viewModel?.fetchProfile()
         getData()
+        viewModel?.getCustomerCount()
         checkNetwork()
         isTemproraryCloseSegmented.setTitleTextAttributes([.foregroundColor: UIColor.white], for: .selected)
+        setupButtonSettings()
     }
     
     func getData() {
@@ -69,7 +64,23 @@ private extension ProfileViewController {
                 guard let self else { return }
                 switch event {
                 case .next(let result):
-                    self.updateUI(with: result)
+                    DispatchQueue.main.async {
+                        self.updateUI(with: result)
+                    }
+                default:
+                    break
+                }
+            }
+            .disposed(by: self.disposeBag)
+        
+        viewModel.getCustomerCountObservable
+            .subscribe { [weak self] event in
+                guard let self else { return }
+                switch event {
+                case .next(.success):
+                    DispatchQueue.main.async {
+                        self.totalCustomerView.initView(title: "Total Users", content: String(viewModel.customerCount ?? 0))
+                    }
                 default:
                     break
                 }
@@ -83,7 +94,20 @@ private extension ProfileViewController {
         labelDescription.text = data.description
         imageStore.getImage(link: data.image)
         labelOpenHours.text = data.is24hours ? "Open 24 Hours" : "\(data.openingTime) - \(data.closingTime)"
+        grossProfitView.initView(title: "Gross Profit", content: data.totalRevenue?.formatToRupiah() ?? "")
         isTemproraryCloseSegmented.selectedSegmentIndex = data.isTemporaryClose ?? false ? 0 : 1
+    }
+    
+    func setupButtonSettings() {
+        buttonSettings.menu = UIMenu(children: [
+            UIAction(title: "Edit Profile", image: UIImage(systemName: "square.and.pencil"), handler: { _ in
+                self.moveToEditProfile()
+            }),
+            UIAction(title: "Logout", image: UIImage(systemName: "rectangle.portrait.and.arrow.right"), handler: { _ in
+                self.setupLogout()
+            })
+        ])
+        buttonSettings.showsMenuAsPrimaryAction = true
     }
     
     func moveToEditProfile() {
@@ -148,5 +172,5 @@ private extension ProfileViewController {
             self?.viewModel?.updateTemporaryClose(isClose: false)
         }), viewController: self)
     }
-    
+
 }

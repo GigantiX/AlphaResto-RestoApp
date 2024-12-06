@@ -54,6 +54,7 @@ class DeliveryCell: UITableViewCell {
             link = Constant.orderDetailDeepLinkUrlAndroid + "\(status)/\(orderDetailVM?.order?.id ?? "")"
             orderDetailVM?.stopUpdatingLocation()
             orderDetailVM?.setLocationValueToRealtime(latitude: 0, longitude: 0)
+            orderDetailVM?.updateTotalAmount(amount: orderDetailVM?.order?.totalPrice ?? 0)
         case .onProcess:
             status = "On Delivery"
             title = "Pesanan sedang diantar"

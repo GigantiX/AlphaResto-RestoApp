@@ -19,13 +19,16 @@ protocol ProfileViewModelInput {
     func logoutAccount() -> Completable
     func invalidateFCMToken()
     func updateTokenFCM(token: String)
+    func getCustomerCount()
 }
 
 protocol ProfileViewModelOutput {
+    var customerCount: Int? { get set }
     var data: ProfileStoreModel? { get set }
     var status: PublishSubject<ProfileStoreModel> { get }
     var updateTokenObservable: PublishSubject<ProfileResult> { get }
     var updateTemporaryCloseObservable: PublishSubject<ProfileResult> { get }
+    var getCustomerCountObservable: PublishSubject<ProfileResult> { get }
     var disposeBag: DisposeBag { get }
 }
 
@@ -40,7 +43,10 @@ final class ProfileViewModelImpl: ProfileViewModel {
     var status: PublishSubject<ProfileStoreModel> = PublishSubject()
     var updateTemporaryCloseObservable = PublishSubject<ProfileResult>()
     var updateTokenObservable = PublishSubject<ProfileResult>()
+    var getTotalRevenueObservable = PublishSubject<ProfileResult>()
+    var getCustomerCountObservable = PublishSubject<ProfileResult>()
     var data: ProfileStoreModel?
+    var customerCount: Int?
     
     init(restoUseCase: RestoUseCase,
          fcmTokenHanlder: FCMTokenHandler
@@ -49,6 +55,9 @@ final class ProfileViewModelImpl: ProfileViewModel {
         self.fcmTokenHandler = fcmTokenHanlder
     }
     
+}
+
+extension ProfileViewModelImpl {
     func updateTemporaryClose(isClose: Bool) {
         restoUseCase.executeUpdateTemporaryClose(restoID: UserDefaultManager.restoID ?? "", isClose: isClose)
             .subscribe { [weak self] event in
@@ -64,16 +73,35 @@ final class ProfileViewModelImpl: ProfileViewModel {
             .disposed(by: self.disposeBag)
     }
     
+    func getCustomerCount() {
+        restoUseCase.executeFetchCustomerCount()
+            .subscribe { [weak self] event in
+                guard let self else { return }
+                switch event {
+                case .next(let customerCount):
+                    self.customerCount = customerCount
+                    self.getCustomerCountObservable.onNext(.success)
+                case .error(let error):
+                    self.getCustomerCountObservable.onNext(.failure(error))
+                default:
+                    break
+                }
+            }
+            .disposed(by: self.disposeBag)  
+    }
+    
     func fetchProfile() {
         restoUseCase.executeFetchProfile(restoID: UserDefaultManager.restoID ?? "")
             .subscribe { [weak self] event in
                 guard let self else { return }
                 switch event {
-                case .success(let result):
-                    self.status.onNext(result)
+                case .next(let result):
                     self.data = result
-                case .failure(let error):
+                    self.status.onNext(result)
+                case .error(let error):
                     debugPrint(error)
+                default:
+                    break
                 }
             }
             .disposed(by: self.disposeBag)
@@ -107,5 +135,4 @@ final class ProfileViewModelImpl: ProfileViewModel {
     func invalidateFCMToken() {
         fcmTokenHandler.invalidateToken()
     }
-    
 }
