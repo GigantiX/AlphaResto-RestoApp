@@ -117,6 +117,7 @@
 		F13B29002C32E7C000E0BB73 /* RestoChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13B28FF2C32E7C000E0BB73 /* RestoChatViewController.swift */; };
 		F13B29022C32E7D700E0BB73 /* RestoChatViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F13B29012C32E7D600E0BB73 /* RestoChatViewController.storyboard */; };
 		F13B29042C339C8300E0BB73 /* ChatViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F13B29032C339C8300E0BB73 /* ChatViewController.storyboard */; };
+		F14AA2882D02E43C00FF3DCA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F14AA2872D02E43C00FF3DCA /* GoogleService-Info.plist */; };
 		F14F783D2C2FB933006018BE /* ChatsRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14F783C2C2FB933006018BE /* ChatsRepositoryImpl.swift */; };
 		F14F783F2C2FBA42006018BE /* Chats.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14F783E2C2FBA42006018BE /* Chats.swift */; };
 		F14F78412C306A08006018BE /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14F78402C306A08006018BE /* Message.swift */; };
@@ -256,6 +257,7 @@
 		F13B28FF2C32E7C000E0BB73 /* RestoChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestoChatViewController.swift; sourceTree = "<group>"; };
 		F13B29012C32E7D600E0BB73 /* RestoChatViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RestoChatViewController.storyboard; sourceTree = "<group>"; };
 		F13B29032C339C8300E0BB73 /* ChatViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ChatViewController.storyboard; sourceTree = "<group>"; };
+		F14AA2872D02E43C00FF3DCA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F14F783C2C2FB933006018BE /* ChatsRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsRepositoryImpl.swift; sourceTree = "<group>"; };
 		F14F783E2C2FBA42006018BE /* Chats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chats.swift; sourceTree = "<group>"; };
 		F14F78402C306A08006018BE /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
@@ -678,6 +680,7 @@
 		3FD1F6D82C19811E0022ACE5 /* Files */ = {
 			isa = PBXGroup;
 			children = (
+				F14AA2872D02E43C00FF3DCA /* GoogleService-Info.plist */,
 				3FD1F6BE2C1831690022ACE5 /* SceneDelegate.swift */,
 			);
 			name = Files;
@@ -1238,6 +1241,7 @@
 				F13B29042C339C8300E0BB73 /* ChatViewController.storyboard in Resources */,
 				3F70CB3D2C256020004C0309 /* TotalPriceCell.xib in Resources */,
 				3F70CB282C252E33004C0309 /* OrderDetailViewController.storyboard in Resources */,
+				F14AA2882D02E43C00FF3DCA /* GoogleService-Info.plist in Resources */,
 				3FD1F6C62C18316B0022ACE5 /* Assets.xcassets in Resources */,
 				F19DCC292C1BEF1B003C740B /* ProfileViewController.storyboard in Resources */,
 			);
@@ -1266,40 +1270,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		621D3143C6D8BA5EDEDB0A2B /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AlfaResto-RestoApp/Pods-AlfaResto-RestoApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AlfaResto-RestoApp/Pods-AlfaResto-RestoApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AlfaResto-RestoApp/Pods-AlfaResto-RestoApp-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		DCFBE1E2A7CAFC830BDE8400 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AlfaResto-RestoApp/Pods-AlfaResto-RestoApp-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AlfaResto-RestoApp/Pods-AlfaResto-RestoApp-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AlfaResto-RestoApp/Pods-AlfaResto-RestoApp-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		621D3143C6D8BA5EDEDB0A2B /* [CP] Embed Pods Frameworks */ = {
@@ -1597,7 +1567,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = UKUGHUS3M8;
+				DEVELOPMENT_TEAM = M7R6QZ3L57;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "AlfaResto-RestoApp/Resources/Info.plist";
@@ -1633,7 +1603,7 @@
 				CODE_SIGN_ENTITLEMENTS = "AlfaResto-RestoApp/AlfaResto-RestoApp.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = UKUGHUS3M8;
+				DEVELOPMENT_TEAM = M7R6QZ3L57;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "AlfaResto-RestoApp/Resources/Info.plist";
