@@ -8,6 +8,7 @@
 import XCTest
 @testable import AlfaResto_RestoApp
 
+//Unit Testing with dummy component
 final class EditProfileVC_UnitTest: XCTestCase {
     
     var vc: EditProfileViewController!
