@@ -8,6 +8,7 @@
 import XCTest
 @testable import AlfaResto_RestoApp
 
+//Unit Testing using direct Storyboard
 final class EditProfileVC_UnitTest2: XCTestCase {
     
     var vc: EditProfileViewController!
