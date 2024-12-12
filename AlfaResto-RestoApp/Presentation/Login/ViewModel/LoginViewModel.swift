@@ -17,6 +17,7 @@ enum LoginResult {
 protocol LoginViewModelInput {
     func login(email: String, password: String) throws
     func updateFCMToken(token: String)
+    func operateSum(a: Int, b: Int) -> Int
 }
 
 protocol LoginViewModelOutput { 
@@ -48,6 +49,10 @@ final class LoginViewModelImpl: LoginViewModel {
 }
 
 extension LoginViewModelImpl {
+    func operateSum(a: Int, b: Int) -> Int {
+        return a + b
+    }
+    
     func updateFCMToken(token: String) {
         fcmTokenHandler.updateTokenFCMToFirestore(with: token)
             .subscribe { [weak self] event in
