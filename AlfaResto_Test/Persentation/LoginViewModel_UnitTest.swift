@@ -24,6 +24,18 @@ final class LoginViewModel_UnitTest: XCTestCase {
         disposeBag = DisposeBag()
     }
     
+    func testOperationSum() {
+        //Given
+        var x = 2
+        var y = 3
+        
+        //When
+        var result = viewModel.operateSum(a: x, b: y)
+        
+        //Then
+        XCTAssertEqual(result, 5, "Testing on operation SUM")
+    }
+    
     override func tearDown() {
         viewModel = nil
         restoUseCaseMock = nil
@@ -136,7 +148,6 @@ final class LoginViewModel_UnitTest: XCTestCase {
 class RestoUseCaseMock: RestoUseCase {
     
     //dummy UseCase for testing, only few func used
-    //Unit Test
     func executeLogout() -> RxSwift.Completable {
         return RxSwift.Completable.empty()
     }
@@ -171,7 +182,6 @@ class RestoUseCaseMock: RestoUseCase {
 class FCMTokenHandlerMock: FCMTokenHandler {
     func invalidateToken() {
     }
-    
     
     var updateTokenResult: Completable!
     
