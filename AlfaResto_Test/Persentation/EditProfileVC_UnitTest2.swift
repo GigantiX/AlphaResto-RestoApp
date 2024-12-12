@@ -68,7 +68,7 @@ final class EditProfileVC_UnitTest2: XCTestCase {
         let result = vc.isSavable()
         
         // Then
-        XCTAssertFalse(true, "Expected isSavable to return false when data is unchanged.")
+        XCTAssertFalse(result, "Expected isSavable to return false when data is unchanged.")
     }
     
 }
