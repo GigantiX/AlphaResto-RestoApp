@@ -40,6 +40,10 @@ class ProfileViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         viewModel?.fetchProfile()
+        setSkeleton()
+        delayedExecution {
+            self.disableSkeleton()
+        }
     }
     
     @IBAction func didSegmentedPressed(_ sender: UISegmentedControl) {
@@ -54,11 +58,34 @@ class ProfileViewController: UIViewController {
 private extension ProfileViewController {
     
     func setup() {
+        
         getData()
         viewModel?.getCustomerCount()
         checkNetwork()
         isTemproraryCloseSegmented.setTitleTextAttributes([.foregroundColor: UIColor.white], for: .selected)
         setupButtonSettings()
+    }
+    
+    func setSkeleton() {
+        self.labelAddress.addSkeleton()
+        self.labelDescription.addSkeleton()
+        self.labelOpenHours.addSkeleton()
+        self.labelPhoneNumber.addSkeleton()
+        self.grossProfitView.addSkeleton()
+        self.totalCustomerView.addSkeleton()
+        self.imageStore.addSkeleton()
+        self.buttonSettings.addSkeleton()
+    }
+    
+    func disableSkeleton() {
+        self.labelAddress.removeSkeleton()
+        self.labelDescription.removeSkeleton()
+        self.labelOpenHours.removeSkeleton()
+        self.labelPhoneNumber.removeSkeleton()
+        self.grossProfitView.removeSkeleton()
+        self.totalCustomerView.removeSkeleton()
+        self.imageStore.removeSkeleton()
+        self.buttonSettings.removeSkeleton()
     }
     
     func getData() {
@@ -93,6 +120,7 @@ private extension ProfileViewController {
     }
     
     func updateUI(with data: ProfileStoreModel) {
+//        disableSkeleton()
         labelAddress.text = data.address
         labelPhoneNumber.text = "+62\(data.phoneNumber)"
         labelDescription.text = data.description
@@ -125,6 +153,12 @@ private extension ProfileViewController {
         let storyboard = UIStoryboard(name: LoginViewController.storyboardID, bundle: nil)
         guard let nextView = storyboard.instantiateViewController(identifier: LoginViewController.storyboardID) as? LoginViewController else { return }
         navigationController?.setViewControllers([nextView], animated: true)
+    }
+    
+    func delayedExecution(completion: @escaping () -> Void) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
+            completion()
+        }
     }
     
     func setupLogout() {

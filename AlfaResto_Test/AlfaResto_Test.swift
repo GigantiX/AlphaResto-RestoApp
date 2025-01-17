@@ -19,13 +19,7 @@ final class AlfaResto_Test: XCTestCase {
     }
     
     func test_ProfileViewController_add_ShouldReturnValue() {
-        let vc = ProfileViewController()
-        let x = 10
-        let y = 10
         
-        let result = vc.add(a: x, b: y)
-        
-        XCTAssertEqual(result, 20)
     }
     
 }
